@@ -1,0 +1,7 @@
+# Local tools, inspection outputs, and TD logs.
+/tmp/
+/log/
+
+# TD session state and lock files.
+/.recent_user_depot.ini
+.lock.f
