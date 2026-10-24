@@ -1,6 +1,6 @@
 # HDMI 图片轮播项目 RTL 设计说明
 
-更新：2026-10-24。基础功能与扩展1、2、3、4已完成RTL集成，系统顶层为 `fpga_hdmi_top`。集成提交 `5f29f03` 当时只做源码、工程登记和静态核对；用户随后授权使用ModelSim Intel FPGA Starter Edition 2020.1进行功能仿真，12项模块/数据链回归通过，见 [功能仿真结果](../sim/RESULTS.md)。没有运行综合、布局布线或烧录，不能据此认定整机硬件或时序已经通过。
+更新：2026-10-24。基础功能与扩展1、2、3、4已完成RTL集成，系统顶层为 `fpga_hdmi_top`。集成提交 `5f29f03` 当时只做源码、工程登记和静态核对；用户随后授权使用ModelSim Intel FPGA Starter Edition 2020.1进行功能仿真，12项模块/数据链回归通过，见 [功能仿真结果](../sim/RESULTS.md)。用户随后运行 TD 流程，现有综合及实现报告已完成只读核查，时序尚未收敛，见 [结果核查](综合及现有实现结果核查.md)。功能仿真通过不能据此认定整机硬件或时序已经通过。
 
 ## 时钟、复位与接口
 
@@ -29,7 +29,7 @@ HDMI有效区640×480，总时序800×525，刷新率约59.52381 Hz。DDC保持 
 | `ddc_scl / ddc_sda` | HDMI DDC |
 | `status_led[3:0]` | 就绪、忙、自动轮播、错误 |
 
-按键1–3两级同步、20 ms消抖，按住只产生一次事件。拨码整体经过两级同步和20 ms稳定检测。`SWITCH_INVERT_MASK[3:0]` 默认全0，逻辑编码为 `switch ^ SWITCH_INVERT_MASK`，可根据板卡ON电平调整。两组编码均为01时保持原图参数。未提供板级引脚和电平资料，本轮没有编造引脚约束。
+按键1–3两级同步、20 ms消抖，按住只产生一次事件。拨码整体经过两级同步和20 ms稳定检测。`SWITCH_INVERT_MASK[3:0]` 默认全0，逻辑编码为 `switch ^ SWITCH_INVERT_MASK`，与现已提供的HX4S20手册中SW向上为1、向下为0一致。两组编码均为01时保持原图参数。已按手册登记HDMI B口ADC和SDC，23个端口位与4个自动配对负端见 [约束说明](../constraints/README.md)，其中KEY1/2按用户确认的实板3.3 V使用LVCMOS33；图2-20的1.5 V上拉标签为手册错误，四个按键均使用LVCMOS33。
 
 状态灯默认高有效，`STATUS_LED_ACTIVE_LOW=1` 时反相。位0为SD初始化、SDRAM初始化及HDMI锁定均完成；位1覆盖初始化/加载/等待转场/重试/故障；位2为自动轮播；位3为存储、解码、FIFO或视频异常。
 
@@ -148,6 +148,8 @@ OSD固定三级：同步ROM读取同时生成面板 → Logo混合 → 文字混
 ## 工程与验证范围
 
 `project1.al` 顶层LABEL/MODULE均为 `fpga_hdmi_top`，Verilog登记31项（含SDRAM头文件）、IP登记7项。新IP通过 `.ipc` 引入，不重复登记 `.v/.vhd`。`rtl/sources.f` 共38个源路径，包含新增4个RTL和4个IP Verilog，保留 `+incdir+rtl/sdram`。
+
+工程另外登记 `constraints/hx4s20_hdmi_b.adc`（ADC_FILE）及 `constraints/fpga_hdmi_top.sdc`（SDC_FILE），均启用综合/实现并归属 `constraint_1`。SDC以20 ns板载时钟为源，从实际PLL参数推导全部频率与相位，不切除25/125 MHz或150 MHz 0°/180°间时序。I/O数值属于初始工程预算；最初只做约束编辑及静态核对，随后只读复核用户生成的TD报告，确认约束已加载，但仍有setup/hold违例，详见结果核查文档。
 
 已清除旧顶层遗留的设计源/IP自动排除标记，保留 `global_def.v` 的头文件排除标记；所有设计源仍启用 `UsedInSyn`。
 

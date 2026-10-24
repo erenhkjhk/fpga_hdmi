@@ -260,6 +260,26 @@
                 </FileInfo>
             </File>
         </Verilog>
+        <ADC_FILE>
+            <File Path="constraints/hx4s20_hdmi_b.adc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="constraint_1"/>
+                    <Attr Name="CompileOrder" Val="1"/>
+                </FileInfo>
+            </File>
+        </ADC_FILE>
+        <SDC_FILE>
+            <File Path="constraints/fpga_hdmi_top.sdc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="constraint_1"/>
+                    <Attr Name="CompileOrder" Val="2"/>
+                </FileInfo>
+            </File>
+        </SDC_FILE>
         <IP_FILE>
             <File Path="al_ip/pll_sdram.ipc">
                 <FileInfo>

@@ -1,0 +1,49 @@
+# HX4S20 / EG4S20BG256; top: fpga_hdmi_top; HDMI connector B.
+# Source: docs/HX4S20开发板手册-HDL版2410(1).pdf, printed pp.6,11-12,18-22.
+# All names are top-level RTL ports. See constraints/README.md for board caveats.
+
+# 50 MHz oscillator, manual pp.21-22, Fig.2-24.
+set_pin_assignment {clk_50m} {LOCATION = R7; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+
+# KEY1 previous, KEY2 next, KEY3 auto toggle, KEY4 reset; active low.
+# User confirmed on 2026-10-24: KEY1/2 pull-ups are actually 3.3 V;
+# the VCC_1V5 labels in manual Fig.2-20 are incorrect. All keys use LVCMOS33.
+# External pull-ups are present; disable internal pulls.
+set_pin_assignment {key_n[0]} {LOCATION = A2; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {key_n[1]} {LOCATION = B2; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {key_n[2]} {LOCATION = B1; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {key_n[3]} {LOCATION = C1; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+
+# SW1..SW4; UP=1, DOWN=0. No RTL inversion is needed.
+set_pin_assignment {switch[0]} {LOCATION = C8; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {switch[1]} {LOCATION = C7; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {switch[2]} {LOCATION = C6; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+set_pin_assignment {switch[3]} {LOCATION = C5; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+
+# TF SPI: DAT3=CS, CLK=SCK, CMD=MOSI, DAT0=MISO (manual p.20).
+# RN18 already provides external 3.3 V pull-ups.
+set_pin_assignment {sd_cs_n} {LOCATION = A12; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {sd_sck} {LOCATION = A14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {sd_mosi} {LOCATION = A13; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {sd_miso} {LOCATION = B14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;}
+
+# Native differential LVDS33 output: constrain P only; TD reserves/drives N.
+# D0 G5/G6, D1 F1/F2, D2 E1/D1, CLK C3/C2 (manual pp.11-12).
+# Do not assign the N pads as GPIO, or use emulated LVDS33_E on these pairs.
+set_pin_assignment {tmds_ch0_p} {LOCATION = G5; IOSTANDARD = LVDS33; PULLTYPE = NONE;}
+set_pin_assignment {tmds_ch1_p} {LOCATION = F1; IOSTANDARD = LVDS33; PULLTYPE = NONE;}
+set_pin_assignment {tmds_ch2_p} {LOCATION = E1; IOSTANDARD = LVDS33; PULLTYPE = NONE;}
+set_pin_assignment {tmds_clk_p} {LOCATION = C3; IOSTANDARD = LVDS33; PULLTYPE = NONE;}
+
+# DDC, connector B; SDA is tri-stated by the original HDMI core.
+set_pin_assignment {ddc_scl} {LOCATION = P2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; DRIVESTRENGTH = 4;}
+set_pin_assignment {ddc_sda} {LOCATION = R2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; DRIVESTRENGTH = 4;}
+
+# Independent LED1..LED4, active high (manual p.6, Fig.2-3).
+set_pin_assignment {status_led[0]} {LOCATION = A4; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {status_led[1]} {LOCATION = A3; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {status_led[2]} {LOCATION = C10; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+set_pin_assignment {status_led[3]} {LOCATION = B12; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;}
+
+# SDRAM is in-package, connected through EG_PHY_SDRAM_2M_32, not top-level GPIO.
+# HPD/CEC, HDMI A, TF DAT1/DAT2 and unrelated peripherals are not RTL ports.
