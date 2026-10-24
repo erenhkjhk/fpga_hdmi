@@ -1,0 +1,10 @@
+Source: user-provided project-root 安路logo.png, copied without changes as anlogic_logo_original.png.
+Background extraction tool: built-in image_gen.imagegen (imagegen skill).
+Result retained as anlogic_logo_cutout.png. This extraction is an AI-edited derivative; the original is preserved separately.
+No replacement typography or new logo design was requested.
+
+Prompt used:
+Edit the supplied logo image as a precise background extraction. Remove ONLY the white background and the large empty white margins. Preserve the exact existing dark navy and red logo, every letter shape, letter spacing, slant, triangular mark, and number and shape of the red horizontal stripes. Do not reinterpret, redraw, rename, typeset or add any text; preserve what the uploaded logo actually shows. The navy and red portions should retain opaque flat interiors; smooth edges may have alpha. Make the background genuinely transparent including the holes inside letters and the white spaces between red stripes. Keep the original logo aspect ratio, place the entire unchanged logo centered on a wide transparent canvas with a small transparent border, do not clip any pixels. This is an FPGA OSD source asset and must remain legible when later resized. Output only the transparent extracted logo, no checkerboard, shadow, glow, frame or extra graphics.
+
+Deterministic FPGA asset conversion:
+tools/build_osd_assets.py fits the saved cutout into a 128x64 canvas, preserves aspect ratio, quantizes to ARGB4444, and emits matching PNG/BIN/HEX data.

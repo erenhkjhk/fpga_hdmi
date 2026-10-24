@@ -1,0 +1,19 @@
+{
+  "ascii_codes": 128,
+  "ascii_nonblank_glyphs": 94,
+  "chinese_glyphs": 28,
+  "chinese_reserved_slots": 128,
+  "font_rom_bytes": 8192,
+  "logo_words": 8192,
+  "checks": [
+    "text coverage",
+    "glyph availability",
+    "ROM address layout",
+    "blank reserved regions",
+    "HEX/BIN agreement",
+    "packed mask round trip",
+    "logo HEX/BIN/PNG agreement",
+    "transparent and opaque logo pixels",
+    "MIF width/depth/continuous addresses/content agree with BIN and HEX"
+  ]
+}

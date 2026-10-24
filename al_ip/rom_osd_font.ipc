@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RomConfig>
+    <FillMemoryInitValues>
+        <fill_all>NONE</fill_all>
+    </FillMemoryInitValues>
+    <GeneralConfig>
+        <Device>EG4S20BG256</Device>
+        <IP_ID>31</IP_ID>
+        <Type>EG_LOGIC_BRAM</Type>
+        <Version>1.0</Version>
+        <create_VHDL>true</create_VHDL>
+        <inst>rom_osd_font</inst>
+    </GeneralConfig>
+    <ImplementOption>
+        <imp_type>32k</imp_type>
+    </ImplementOption>
+    <MemoryInitialization>
+        <init_file>../assets/osd/td_init/osd_font_8x8192.mif</init_file>
+        <init_file_enable>true</init_file_enable>
+    </MemoryInitialization>
+    <MemoryType>
+        <mem_type>SP</mem_type>
+    </MemoryType>
+    <PortAOption>
+        <depth_a>8192</depth_a>
+        <register_a>None</register_a>
+        <width_a>8</width_a>
+    </PortAOption>
+    <UserConfig>
+        <debug_enable>false</debug_enable>
+        <pack_enable>false</pack_enable>
+    </UserConfig>
+    <GeneratedFiles>
+        <VHDL Enable="false">rom_osd_font.vhd</VHDL>
+        <Verilog Enable="true">rom_osd_font.v</Verilog>
+    </GeneratedFiles>
+</RomConfig>

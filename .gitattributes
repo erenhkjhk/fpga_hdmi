@@ -1,0 +1,2 @@
+# Preserve exact asset bytes so recorded SHA-256 values survive checkout.
+assets/osd/** -text
