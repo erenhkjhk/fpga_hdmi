@@ -53,7 +53,6 @@
             </File>
             <File Path="rtl/sdram/sdr_as_ram.enc.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
@@ -62,7 +61,6 @@
             </File>
             <File Path="rtl/sdram/sdr_init_ref.enc.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
@@ -71,7 +69,6 @@
             </File>
             <File Path="rtl/sdram/sdr_wrrd.enc.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
@@ -80,76 +77,244 @@
             </File>
             <File Path="rtl/sdram/sdram_ram_wrapper.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="9"/>
                 </FileInfo>
             </File>
-        </Verilog>
-        <IP_FILE>
-            <File Path="al_ip/pll_sdram.ipc">
+            <File Path="rtl/audio/hdmi_acr_48k.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="10"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/pll_hdmi.ipc">
+            <File Path="rtl/audio/i2s_stereo_receiver.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="11"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/fifo_pixel_async/fifo_pixel_async.xml">
+            <File Path="rtl/audio/i2s_test_tone.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="12"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/ram_scale_line.ipc">
+            <File Path="rtl/common/cdc_level.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="13"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/ram_fade_block.ipc">
+            <File Path="rtl/common/cdc_mailbox.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="14"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/rom_osd_font.ipc">
+            <File Path="rtl/common/reset_sync.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="15"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/rom_anlogic_logo.ipc">
+            <File Path="rtl/control/display_control.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="16"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/control/key_debounce.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="17"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/control/slideshow_control.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="18"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/fpga_hdmi_top.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="19"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/framebuffer/sdram_frame_store.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="20"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/image/bilinear_scaler.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="21"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/image/bmp24_decoder.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="22"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/fat32_read_top.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="23"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/fat32_reader.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="24"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/sd_sector_buffer.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="25"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/sd_spi_card.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="26"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/sd_spi_cmd.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="27"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/storage/spi_byte_master.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="28"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/video/video_color_adjust.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="29"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/video/video_osd.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="30"/>
+                </FileInfo>
+            </File>
+            <File Path="rtl/video/video_stream_640x480.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="31"/>
+                </FileInfo>
+            </File>
+        </Verilog>
+        <IP_FILE>
+            <File Path="al_ip/pll_sdram.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="32"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/pll_hdmi.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="33"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/fifo_pixel_async/fifo_pixel_async.xml">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="34"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/ram_scale_line.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="35"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/ram_fade_block.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="36"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/rom_osd_font.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="37"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/rom_anlogic_logo.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="38"/>
                 </FileInfo>
             </File>
         </IP_FILE>
@@ -161,8 +326,8 @@
         </FileSet>
     </FileSets>
     <TOP_MODULE>
-        <LABEL>hdmi_tx_640x480</LABEL>
-        <MODULE>hdmi_tx_640x480</MODULE>
+        <LABEL>fpga_hdmi_top</LABEL>
+        <MODULE>fpga_hdmi_top</MODULE>
         <CREATEINDEX>auto</CREATEINDEX>
     </TOP_MODULE>
     <Property>

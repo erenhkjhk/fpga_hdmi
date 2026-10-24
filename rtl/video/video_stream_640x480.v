@@ -18,18 +18,22 @@ module video_stream_640x480 (
     input wire [9:0] fifo_used,
     input wire fifo_ready,
     output wire fifo_re,
-    input wire axis_ready,
-    input wire video_locked,
+    output wire frame_tick,
+    output reg [9:0] axis_x,
+    output reg [8:0] axis_y,
     output reg axis_user,
     output reg axis_valid,
     output reg axis_last,
     output reg [23:0] axis_data,
+    output reg axis_image,
     output reg displaying_image,
-    output reg underflow,
-    output reg protocol_error
+    output reg underflow
 );
     reg [9:0] x, y;
     reg next_has_image;
+    reg [9:0] x_d;
+    reg [8:0] y_d;
+    assign frame_tick = !rst && (x == 0) && (y == 480);
     reg active_d, first_d, last_d, image_d, requested_d;
     wire active = (x < 640) && (y < 480);
     assign fifo_re = !rst && active && displaying_image && fifo_ready && !fifo_empty;
@@ -40,8 +44,9 @@ module video_stream_640x480 (
             frame_req_valid <= 0; next_has_image <= 0;
             active_d <= 0; first_d <= 0; last_d <= 0;
             image_d <= 0; requested_d <= 0;
-            axis_user <= 0; axis_valid <= 0; axis_last <= 0; axis_data <= 0;
-            displaying_image <= 0; underflow <= 0; protocol_error <= 0;
+            axis_user <= 0; axis_valid <= 0; axis_last <= 0; axis_data <= 0; axis_image <= 0;
+            displaying_image <= 0; underflow <= 0;
+            x_d <= 0; y_d <= 0; axis_x <= 0; axis_y <= 0;
         end else begin
             if (frame_req_valid && frame_req_ready) frame_req_valid <= 0;
             if ((x == 0) && (y == 480)) begin
@@ -58,6 +63,8 @@ module video_stream_640x480 (
                 end else y <= y + 1'b1;
             end else x <= x + 1'b1;
 
+            x_d <= x; y_d <= y[8:0];
+            axis_x <= x_d; axis_y <= y_d;
             active_d <= active;
             first_d <= active && (x == 0) && (y == 0);
             last_d <= active && (x == 639);
@@ -66,6 +73,7 @@ module video_stream_640x480 (
             axis_valid <= active_d;
             axis_user <= first_d;
             axis_last <= last_d;
+            axis_image <= active_d && image_d && requested_d && fifo_valid;
             if (active_d && image_d && requested_d && fifo_valid) axis_data <= fifo_data[23:0];
             else axis_data <= 24'h000000;
 
@@ -75,7 +83,6 @@ module video_stream_640x480 (
                 // Recover alignment through the coordinated FIFO flush next blank.
                 displaying_image <= 0;
             end
-            if (video_locked && axis_valid && !axis_last && !axis_ready) protocol_error <= 1;
         end
     end
 endmodule

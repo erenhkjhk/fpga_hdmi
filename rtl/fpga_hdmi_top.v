@@ -7,10 +7,12 @@
 module fpga_hdmi_top #(
     parameter integer AUTO_INTERVAL_MS = 5000,
     parameter AUTO_DEFAULT = 1'b1,
-    parameter STATUS_LED_ACTIVE_LOW = 1'b0
+    parameter STATUS_LED_ACTIVE_LOW = 1'b0,
+    parameter [3:0] SWITCH_INVERT_MASK = 4'b0000
 ) (
     input wire clk_50m,
     input wire [3:0] key_n,
+    input wire [3:0] switch, // Logical SW1=bit0, SW4=bit3; board polarity via mask.
     output wire sd_cs_n,
     output wire sd_sck,
     output wire sd_mosi,
@@ -191,6 +193,7 @@ module fpga_hdmi_top #(
     wire [31:0] app_wr_data, sdr_rd_data;
     wire [3:0] app_wr_mask;
     wire memory_fault_mem, memory_fault_sys, memory_ready_sys;
+    wire transition_mem, transition_sys;
     sdram_ram_wrapper #(.SELF_REFRESH_OPEN(1'b0)) u_sdram (
         .Sdr_clk(clk_sdram), .Sdr_clk_sft(clk_sdram_180), .Rst(rst_mem),
         .Sdr_init_done(sdr_init_done), .Sdr_init_ref_vld(sdr_refresh), .Sdr_busy(sdr_busy),
@@ -214,6 +217,7 @@ module fpga_hdmi_top #(
         .video_fifo_full(video_fifo_full), .video_fifo_used(video_used_mem),
         .video_fifo_wr_ready(video_wr_done), .video_fifo_rd_ready(video_rd_done_mem),
         .video_fifo_reset(video_fifo_reset), .fault(memory_fault_mem),
+        .transition_active(transition_mem),
         .sdr_init_done(sdr_init_done), .sdr_refresh(sdr_refresh),
         .app_refresh_req(app_refresh_req), .app_wr_en(app_wr_en), .app_wr_addr(app_wr_addr),
         .app_wr_data(app_wr_data), .app_wr_mask(app_wr_mask),
@@ -226,7 +230,9 @@ module fpga_hdmi_top #(
         .async_data(memory_fault_mem || video_fifo_overflow || load_underflow),
         .sync_data(memory_fault_sys));
 
-    wire auto_enabled, slideshow_busy, slideshow_error;
+    cdc_level u_transition_sys (.clk(clk_50m), .rst(rst_sys),
+        .async_data(transition_mem), .sync_data(transition_sys));
+    wire auto_enabled, slideshow_busy, slideshow_error, have_image;
     wire [15:0] current_index;
     slideshow_control #(.AUTO_INTERVAL_MS(AUTO_INTERVAL_MS), .AUTO_DEFAULT(AUTO_DEFAULT)) u_slideshow (
         .clk(clk_50m), .rst(rst_sys), .tick_ms(tick_ms),
@@ -241,12 +247,33 @@ module fpga_hdmi_top #(
         .finish_valid(finish_sys), .finish_ready(finish_ready_sys), .finish_abort(finish_abort_sys),
         .result_valid(result_sys), .result_ready(result_ready_sys), .result_abort(result_abort_sys),
         .auto_enabled(auto_enabled), .busy(slideshow_busy), .error(slideshow_error),
-        .current_index(current_index)
+        .current_index(current_index), .have_image(have_image)
     );
 
     wire axis_user, axis_valid, axis_last, axis_ready, video_locked;
     wire [23:0] axis_data;
-    wire displaying_image, video_underflow, video_protocol_error;
+    wire displaying_image, video_underflow;
+    reg video_protocol_error;
+    wire frame_tick_pixel;
+    wire raw_user, raw_valid, raw_last, raw_image, color_user, color_valid, color_last;
+    wire [23:0] raw_data, color_data;
+    wire [9:0] raw_x, color_x;
+    wire [8:0] raw_y, color_y;
+    wire [3:0] switch_frame, osd_status;
+    wire [23:0] uptime_frame;
+    wire [19:0] index_frame, count_frame;
+    wire [2:0] video_status_sys;
+    display_control u_display_control (
+        .clk(clk_50m), .rst(rst_sys), .tick_ms(tick_ms),
+        .switch_async(switch ^ SWITCH_INVERT_MASK), .current_index(current_index),
+        .image_count(image_count), .have_image(have_image), .auto_enabled(auto_enabled),
+        .busy(slideshow_busy), .fading(transition_sys),
+        .error(slideshow_error || storage_error || memory_fault_sys || load_overflow
+               || video_status_sys[2] || video_status_sys[1]),
+        .pixel_clk(clk_pixel), .pixel_rst(rst_pixel), .frame_tick(frame_tick_pixel),
+        .switch_frame(switch_frame), .uptime_frame(uptime_frame),
+        .index_frame(index_frame), .count_frame(count_frame), .status_frame(osd_status)
+    );
     video_stream_640x480 u_video_stream (
         .clk(clk_pixel), .rst(rst_pixel),
         .frame_req_valid(frame_req_pixel), .frame_req_ready(frame_req_ready_pixel),
@@ -255,10 +282,33 @@ module fpga_hdmi_top #(
         .fifo_data(video_fifo_out), .fifo_valid(video_fifo_valid), .fifo_empty(video_fifo_empty),
         .fifo_used(video_used_pixel),
         .fifo_ready(video_rd_done && video_wr_done_pixel && !video_rd_reset),
-        .fifo_re(video_fifo_re), .axis_ready(axis_ready), .video_locked(video_locked),
-        .axis_user(axis_user), .axis_valid(axis_valid), .axis_last(axis_last), .axis_data(axis_data),
-        .displaying_image(displaying_image), .underflow(video_underflow), .protocol_error(video_protocol_error)
+        .fifo_re(video_fifo_re), .frame_tick(frame_tick_pixel), .axis_x(raw_x), .axis_y(raw_y),
+        .axis_user(raw_user), .axis_valid(raw_valid), .axis_last(raw_last), .axis_data(raw_data),
+        .axis_image(raw_image),
+        .displaying_image(displaying_image), .underflow(video_underflow)
     );
+    video_color_adjust u_color (
+        .clk(clk_pixel), .rst(rst_pixel), .switch_code(switch_frame),
+        .in_data(raw_data), .in_x(raw_x), .in_y(raw_y),
+        .in_valid(raw_valid), .in_user(raw_user), .in_last(raw_last), .in_image(raw_image),
+        .out_data(color_data), .out_x(color_x), .out_y(color_y),
+        .out_valid(color_valid), .out_user(color_user), .out_last(color_last)
+    );
+    video_osd u_osd (
+        .clk(clk_pixel), .rst(rst_pixel), .frame_tick(frame_tick_pixel),
+        .switch_code(switch_frame), .status(osd_status), .uptime(uptime_frame),
+        .index_bcd(index_frame), .count_bcd(count_frame),
+        .in_data(color_data), .in_x(color_x), .in_y(color_y),
+        .in_valid(color_valid), .in_user(color_user), .in_last(color_last),
+        .out_data(axis_data), .out_x(), .out_y(),
+        .out_valid(axis_valid), .out_user(axis_user), .out_last(axis_last)
+    );
+    // Check the stream at the HDMI input AFTER all pixel pipelines.
+    always @(posedge clk_pixel or posedge rst_pixel) begin
+        if (rst_pixel) video_protocol_error <= 0;
+        else if (video_locked && axis_valid && !axis_last && !axis_ready)
+            video_protocol_error <= 1;
+    end
     wire i2s_bclk, i2s_lrck, i2s_data, audio_valid, acr_valid;
     wire [23:0] audio_left, audio_right;
     wire [19:0] acr_cts, acr_n;
@@ -282,7 +332,6 @@ module fpga_hdmi_top #(
         .O_tmds_ch0_p(tmds_ch0_p), .O_tmds_ch1_p(tmds_ch1_p),
         .O_tmds_ch2_p(tmds_ch2_p), .O_tmds_clk_p(tmds_clk_p)
     );
-    wire [2:0] video_status_sys;
     cdc_level #(.WIDTH(3)) u_video_status_sys (.clk(clk_50m), .rst(rst_sys),
         .async_data({video_protocol_error, video_underflow || video_fifo_underflow, video_locked}),
         .sync_data(video_status_sys));

@@ -37,6 +37,7 @@ module sdram_frame_store (
     input wire video_fifo_rd_ready,
     output reg video_fifo_reset,
     output reg fault,
+    output reg transition_active,
     input wire sdr_init_done,
     input wire sdr_refresh,
     output wire app_refresh_req,
@@ -69,11 +70,35 @@ module sdram_frame_store (
     reg read_active, selected_valid, selected_region;
     reg [18:0] read_remaining;
     reg [20:0] read_address;
+    reg [8:0] fade_alpha, selected_alpha;
+    reg selected_fade, selected_new_region, read_new, pair_pending, block_half;
+    wire [31:0] old_pixel;
+    reg [31:0] new_pixel_d, mixed_pixel;
+    reg return_valid_d, mixed_valid;
+    wire reading = (state == R_SEND) || (state == R_DRAIN);
+    wire old_pass = selected_fade && !read_new;
+    wire read_return = reading && sdr_rd_valid && (transferred < 64);
+    ram_fade_block u_old_block (
+        .dia(sdr_rd_data), .addra({block_half, transferred[5:0]}), .clka(clk),
+        .wea(!rst && !fault && read_return && old_pass),
+        .addrb({block_half, transferred[5:0]}), .clkb(clk), .dob(old_pixel)
+    );
+    function [7:0] fade_channel;
+        input [7:0] old_c, new_c;
+        input [8:0] alpha;
+        reg signed [9:0] delta;
+        reg signed [19:0] scaled, product;
+        begin
+            delta = $signed({2'b0,new_c}) - $signed({2'b0,old_c});
+            product = delta * $signed({1'b0,alpha});
+            scaled = product + $signed({4'b0,old_c,8'b0}) + 20'sd128;
+            fade_channel = scaled[15:8];
+        end
+    endfunction
     wire refresh_due = (refresh_timer >= REFRESH_INTERVAL);
     // APUG011 lists Sdr_busy as reserved. Own transaction/drain states enforce
     // exclusion; Sdr_init_ref_vld is the documented refresh exclusion signal.
     wire controller_idle = sdr_init_done && !sdr_refresh;
-    wire reading = (state == R_SEND) || (state == R_DRAIN);
     wire writing = (state == W_SEND) || (state == W_DRAIN);
     wire abort_draining = load_active && abort_requested && !writing;
     wire write_pop = (state == W_SEND) && (pop_remaining != 0);
@@ -82,7 +107,7 @@ module sdram_frame_store (
                            && controller_idle && !refresh_due && !frame_info_valid;
     assign begin_ready = !rst && !fault && (state == IDLE) && controller_idle
                        && !refresh_due && !frame_req_valid && !load_active
-                       && !pending_front && !result_valid && load_fifo_ready;
+                       && !pending_front && !transition_active && !result_valid && load_fifo_ready;
     assign finish_ready = !rst && load_active && !finish_seen;
     assign load_fifo_re = !rst && !fault && load_fifo_ready && !load_fifo_empty
                          && (write_pop || abort_draining);
@@ -93,11 +118,12 @@ module sdram_frame_store (
     assign app_wr_data = load_fifo_data;
     assign app_wr_mask = 4'b0000;
     assign app_rd_en = !rst && !fault && (state == R_SEND);
-    assign app_rd_addr = read_address + {14'd0, issued};
-    assign video_fifo_data = sdr_rd_data;
-    assign video_fifo_we = !rst && !fault && reading && sdr_rd_valid
-                         && (transferred < 7'd64) && video_fifo_wr_ready
-                         && !video_fifo_full;
+    // read_address is an offset shared by the two corresponding frame regions.
+    assign app_rd_addr = read_address + {14'd0, issued}
+                        + ((read_new ? selected_new_region : selected_region) ? FRAME_STRIDE : 21'd0);
+    assign video_fifo_data = mixed_pixel;
+    assign video_fifo_we = !rst && !fault && mixed_valid && video_fifo_wr_ready
+                         && !video_fifo_reset && !video_fifo_full;
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -115,8 +141,22 @@ module sdram_frame_store (
             result_valid <= 0; result_abort <= 0;
             frame_info_valid <= 0; frame_has_image <= 0;
             video_fifo_reset <= 1;
-            fault <= 0;
+            fault <= 0; transition_active <= 0; fade_alpha <= 0;
+            selected_fade <= 0; selected_alpha <= 0; selected_new_region <= 0;
+            read_new <= 0; pair_pending <= 0; block_half <= 0;
+            new_pixel_d <= 0; mixed_pixel <= 0; return_valid_d <= 0; mixed_valid <= 0;
         end else begin
+            // One clock for synchronous block RAM, then one registered RGB blend.
+            // R_DRAIN's quiet interval includes both stages and the FIFO write.
+            return_valid_d <= !fault && read_return && !old_pass;
+            new_pixel_d <= sdr_rd_data;
+            mixed_valid <= return_valid_d && !fault;
+            if (selected_fade) mixed_pixel <= {8'b0,
+                fade_channel(old_pixel[23:16], new_pixel_d[23:16], selected_alpha),
+                fade_channel(old_pixel[15:8], new_pixel_d[15:8], selected_alpha),
+                fade_channel(old_pixel[7:0], new_pixel_d[7:0], selected_alpha)};
+            else mixed_pixel <= new_pixel_d;
+            if (mixed_valid && (!video_fifo_wr_ready || video_fifo_full || video_fifo_reset)) fault <= 1;
             if (!sdr_init_done) refresh_timer <= 0;
             else if (refresh_timer != 13'h1FFF) refresh_timer <= refresh_timer + 1'b1;
             if (result_valid && result_ready) result_valid <= 0;
@@ -176,7 +216,7 @@ module sdram_frame_store (
             end
             if (reading && sdr_rd_valid) begin
                 transferred <= transferred + 1'b1;
-                if (video_fifo_full || !video_fifo_wr_ready || (transferred >= 64)) fault <= 1;
+                if (transferred >= 64) fault <= 1;
             end
 
             case (state)
@@ -190,18 +230,38 @@ module sdram_frame_store (
                             video_fifo_reset <= 1;
                             flush_count <= 0;
                             selected_valid <= front_valid || pending_front;
-                            selected_region <= pending_front ? pending_region : front_region;
-                            if (pending_front) begin
-                                front_region <= pending_region;
-                                front_valid <= 1;
-                                pending_front <= 0;
-                                result_abort <= 0;
-                                result_valid <= 1;
+                            selected_region <= front_region;
+                            selected_new_region <= pending_region;
+                            selected_fade <= transition_active;
+                            selected_alpha <= fade_alpha;
+                            read_new <= 0; pair_pending <= 0; block_half <= 0;
+                            if (pending_front && !front_valid) begin
+                                // First image has no predecessor to blend with.
+                                selected_region <= pending_region;
+                                front_region <= pending_region; front_valid <= 1;
+                                pending_front <= 0; selected_fade <= 0;
+                                result_abort <= 0; result_valid <= 1;
+                            end else if (pending_front && !transition_active) begin
+                                transition_active <= 1; fade_alpha <= 0;
+                                selected_fade <= 1; selected_alpha <= 0;
+                            end else if (transition_active) begin
+                                if (fade_alpha == 256) begin
+                                    // Alpha=256 has occupied a complete display frame.
+                                    // Release the OLD region only now, after all reads drain.
+                                    transition_active <= 0; selected_fade <= 0;
+                                    selected_region <= pending_region;
+                                    front_region <= pending_region; pending_front <= 0;
+                                    result_abort <= 0; result_valid <= 1;
+                                end else begin
+                                    fade_alpha <= fade_alpha + 9'd4;
+                                    selected_alpha <= fade_alpha + 9'd4;
+                                end
                             end
                             state <= V_FLUSH;
                         end else if (read_active && (read_remaining >= 64)
                                      && video_fifo_wr_ready && (video_fifo_used <= 10'd896)) begin
                             issued <= 0; transferred <= 0;
+                            read_new <= pair_pending;
                             state <= R_SEND;
                         end else if (load_active && !abort_requested
                                      && (written_words < FRAME_WORDS)
@@ -239,9 +299,14 @@ module sdram_frame_store (
                     if (sdr_rd_valid) quiet_count <= 0;
                     else if (quiet_count != 255) quiet_count <= quiet_count + 1'b1;
                     if ((transferred == 64) && (quiet_count >= 20)) begin
-                        read_address <= read_address + 21'd64;
-                        read_remaining <= read_remaining - 19'd64;
-                        if (read_remaining == 64) read_active <= 0;
+                        if (old_pass) begin
+                            pair_pending <= 1; // Preserve old block across refresh/idle.
+                        end else begin
+                            pair_pending <= 0; read_new <= 0; block_half <= !block_half;
+                            read_address <= read_address + 21'd64;
+                            read_remaining <= read_remaining - 19'd64;
+                            if (read_remaining == 64) read_active <= 0;
+                        end
                         state <= IDLE;
                     end else if (wait_count == 255) begin
                         fault <= 1; read_active <= 0; state <= IDLE;
@@ -274,7 +339,7 @@ module sdram_frame_store (
                     wait_count <= wait_count + 1'b1;
                     if (video_fifo_wr_ready && video_fifo_rd_ready) begin
                         read_active <= selected_valid;
-                        read_address <= selected_region ? FRAME_STRIDE : 21'd0;
+                        read_address <= 0;
                         read_remaining <= selected_valid ? FRAME_WORDS : 19'd0;
                         frame_has_image <= selected_valid;
                         frame_info_valid <= 1;

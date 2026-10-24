@@ -2,7 +2,8 @@
 `default_nettype none
 
 // Index order is the FAT root-directory order. One pending manual direction is
-// retained while a file loads. Auto-play counts its dwell time after commit.
+// retained while a file loads OR fades. Frame-store result means the complete
+// transition has finished and the old region is reusable. Dwell starts then.
 module slideshow_control #(
     parameter integer AUTO_INTERVAL_MS = 5000,
     parameter AUTO_DEFAULT = 1'b1
@@ -39,6 +40,7 @@ module slideshow_control #(
     output reg auto_enabled,
     output wire busy,
     output reg error,
+    output reg have_image,
     output reg [15:0] current_index
 );
     localparam [3:0] WAIT_CATALOG=0, OPEN_FILE=1, READ_FILE=2,
@@ -47,7 +49,7 @@ module slideshow_control #(
     reg [3:0] state;
     reg [15:0] candidate_index, attempts;
     reg [1:0] pending_step;
-    reg direction_previous, have_image, image_started, file_closed;
+    reg direction_previous, image_started, file_closed;
     reg fatal_after_result;
     reg [31:0] elapsed_ms;
     reg [15:0] retry_ms;

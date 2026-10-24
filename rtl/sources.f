@@ -29,3 +29,11 @@ al_ip/pll_sdram.v
 al_ip/pll_hdmi.v
 al_ip/fifo_pixel_async/fifo_pixel_async.v
 al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v
+rtl/control/display_control.v
+rtl/image/bilinear_scaler.v
+rtl/video/video_color_adjust.v
+rtl/video/video_osd.v
+al_ip/ram_scale_line.v
+al_ip/ram_fade_block.v
+al_ip/rom_osd_font.v
+al_ip/rom_anlogic_logo.v
