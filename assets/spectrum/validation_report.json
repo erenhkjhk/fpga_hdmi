@@ -1,0 +1,62 @@
+{
+  "purpose": "ROM initialization data for architecture planning; not generated IP or RTL validation",
+  "dft_length": 256,
+  "sample_rate_hz": 48000,
+  "bin_spacing_hz": 187.5,
+  "twiddle": {
+    "width": 32,
+    "depth": 256,
+    "high_16": "signed Q1.15 cos(2*pi*address/256)",
+    "low_16": "signed Q1.15 -sin(2*pi*address/256)",
+    "phase_address": "(bin_index * sample_index) mod 256",
+    "max_absolute_error": 3.0517578125e-05
+  },
+  "window": {
+    "width": 16,
+    "depth": 256,
+    "formula": "Q1.15(0.5 - 0.5*cos(2*pi*n/255)), n=0..255",
+    "range": [
+      0,
+      32767
+    ]
+  },
+  "checks": [
+    "MIF address continuity and HEX/BIN equality",
+    "twiddle quadrants and quantization error",
+    "Hann symmetry and zero endpoints",
+    "windowed 2437.5 Hz sine has dominant DFT bin 13"
+  ],
+  "numerical_tone_peak_bin": 13,
+  "files": [
+    {
+      "path": "dft_twiddle_q15_32x256.bin",
+      "bytes": 1024,
+      "sha256": "18646dcae3315468b80bdade678ae3f6238ed5f65e98fecdb5d1cfc961832af5"
+    },
+    {
+      "path": "hann_q15_16x256.bin",
+      "bytes": 512,
+      "sha256": "dde3956d3aedb23d5c0dbde7e2664641feff9518c31cacf18db62ed7e9b920ad"
+    },
+    {
+      "path": "dft_twiddle_q15_32x256.hex",
+      "bytes": 2560,
+      "sha256": "f158a64c7034d81df985c8a2a902ab80fc0206d852f91f5ef0f7e98dfb957eb1"
+    },
+    {
+      "path": "hann_q15_16x256.hex",
+      "bytes": 1536,
+      "sha256": "19ac1a0cfc4eb2c63ccf20d9d685de5d308ee256483e44afdb530a3f43772e84"
+    },
+    {
+      "path": "td_init/dft_twiddle_q15_32x256.mif",
+      "bytes": 4185,
+      "sha256": "f0a4dadc1ea404c6b274c4a1981c9dc407ed9cdc184f2d6ca0834250955abe4e"
+    },
+    {
+      "path": "td_init/hann_q15_16x256.mif",
+      "bytes": 3161,
+      "sha256": "6c1f2cf4446b52edfd46499f146b850ccc733ce67f8e82cc20726577123c1ee4"
+    }
+  ]
+}

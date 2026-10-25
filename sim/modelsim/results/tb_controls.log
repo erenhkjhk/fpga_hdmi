@@ -1,0 +1,14 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_controls glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_controls.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_controls.do" 
+# Start time: 14:28:50 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_controls
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.switch_filter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.cdc_level
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.uptime_counter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_controls.do}
+# PASS: tb_controls
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_controls.sv(19)
+#    Time: 42701 ns  Iteration: 0  Instance: /tb_controls
+# End time: 14:28:51 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

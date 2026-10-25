@@ -1,0 +1,18 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_osd glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_osd.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_osd.do" 
+# Start time: 14:28:52 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_osd
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.video_compositor
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_osd_font
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_anlogic_logo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_osd.do}
+# incase
+# 
+# incase
+# 
+# PASS: tb_osd full frame + 16 adjustment combinations + frame-latched update
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_osd.sv(62)
+#    Time: 12752640 ns  Iteration: 1  Instance: /tb_osd
+# End time: 14:28:54 on Oct 25,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

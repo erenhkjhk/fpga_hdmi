@@ -1,0 +1,14 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_bmp glbl "+CASE=5" -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_bmp_CASE_5.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_bmp_CASE_5.do" 
+# Start time: 14:27:11 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_bmp
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.bmp24_decoder
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.bilinear_scaler
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_scale_line1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_bmp_CASE_5.do}
+# PASS: tb_bmp CASE=5 W=3 H=2 pixels=0 cycles=95
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_bmp.sv(82)
+#    Time: 2900 ns  Iteration: 1  Instance: /tb_bmp
+# End time: 14:27:12 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

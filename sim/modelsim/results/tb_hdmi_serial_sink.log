@@ -1,0 +1,13 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_hdmi_serial_sink glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_hdmi_serial_sink.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_hdmi_serial_sink.do" 
+# Start time: 20:03:49 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_hdmi_serial_sink
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.hdmi_serial_sink
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_hdmi_serial_sink.do}
+# HDMI_SERIAL_ALIGNED clock=0000011111
+# PASS: tb_hdmi_serial_sink 640 physical pixels; active RGB AB55AB shares guard words; LSB-first alignment
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_hdmi_serial_sink.sv(29)
+#    Time: 26418 ns  Iteration: 0  Instance: /tb_hdmi_serial_sink
+# End time: 20:03:50 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

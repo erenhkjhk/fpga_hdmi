@@ -1,0 +1,78 @@
+{
+  "captured_at": "2026-10-25T22:03:22.600954+08:00",
+  "workspace": "C:\\Users\\30909\\.codex\\worktrees\\main-work\\fpga_hdmi_project",
+  "operation": "Read existing reports and copy snapshots only; no synthesis or implementation started.",
+  "files": [
+    {
+      "snapshot": "gate.timing",
+      "source": "project1_Runs/syn_1/project1_gate.timing",
+      "source_modified_at": "2026-10-25T21:58:39.991780+08:00",
+      "bytes": 2166925,
+      "sha256": "a5c90bc04f864a08585f60acf759805b8f826bf2b68c3921ca0df92d5cf502fd"
+    },
+    {
+      "snapshot": "gate.area",
+      "source": "project1_Runs/syn_1/project1_gate.area",
+      "source_modified_at": "2026-10-25T21:58:36.577391+08:00",
+      "bytes": 20053,
+      "sha256": "67db635eaec980e3b0f78755c318cf0a9086acfec5b7f11f60c3b15202ea111b"
+    },
+    {
+      "snapshot": "syn_run.log",
+      "source": "project1_Runs/syn_1/run.log",
+      "source_modified_at": "2026-10-25T21:58:40.775506+08:00",
+      "bytes": 99666,
+      "sha256": "0f722bc124c8ec9e866582ed2231b8015ec9b6b884ce290ad6eafa1318f16ffc"
+    },
+    {
+      "snapshot": "phy_run.log",
+      "source": "project1_Runs/phy_1/run.log",
+      "source_modified_at": "2026-10-25T21:59:09.513041+08:00",
+      "bytes": 24025,
+      "sha256": "66af76c02edfed095dda58da9d987f1e68189b87bd369ae70717d74cf720cd93"
+    },
+    {
+      "snapshot": "initial_check.log",
+      "source": "tmp/td_registration/validate_gate.log",
+      "source_modified_at": "2026-10-25T21:53:06.984128+08:00",
+      "bytes": 87971,
+      "sha256": "eedfd5bbb19609ceef38750efe0a106b99d0fe2249cbdf2b2af97ce450f5c69e"
+    },
+    {
+      "snapshot": "initial_check.tcl",
+      "source": "tmp/td_registration/validate_gate.tcl",
+      "source_modified_at": "2026-10-25T21:51:51.946232+08:00",
+      "bytes": 984,
+      "sha256": "cb1fad2e6aaac786b6893ed82958d6b06bd4fc0db6fa9df03eb80d712a0a7409"
+    },
+    {
+      "snapshot": "clock_summary.xml",
+      "source": "tmp/td_registration/clocks.rpt",
+      "source_modified_at": "2026-10-25T21:53:05.920961+08:00",
+      "bytes": 200,
+      "sha256": "43a7d25bab963db2a07980414eae67f5e40cbd1c7ce52354ff7f197bc236ab4a"
+    },
+    {
+      "snapshot": "constraint_inspect.log",
+      "source": "tmp/td_registration/inspect.log",
+      "source_modified_at": "2026-10-25T21:54:40.702592+08:00",
+      "bytes": 4530,
+      "sha256": "5a58084a395f29d49656535313d64aa0ab7d5aafdce10ce5ca001eda528bee45"
+    },
+    {
+      "snapshot": "applied.sdc",
+      "source": "tmp/td_registration/applied.sdc",
+      "source_modified_at": "2026-10-25T21:54:40.699283+08:00",
+      "bytes": 1936,
+      "sha256": "eadd0afb20be647c04d670544f7a01b7668386da8ab18a5ef2d9e8f8b2fa0e7e"
+    },
+    {
+      "snapshot": "project1.al.snapshot",
+      "source": "project1.al",
+      "source_modified_at": "2026-10-25T21:56:53.084029+08:00",
+      "bytes": 19455,
+      "sha256": "7b009de2e5758453e93e55efc14a8628a729651e4ea459d784eda298cb416159"
+    }
+  ],
+  "source_files_hashed": 70
+}

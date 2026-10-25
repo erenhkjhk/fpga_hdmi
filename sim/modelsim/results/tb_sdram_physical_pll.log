@@ -1,0 +1,41 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_sdram_physical_pll glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_sdram_physical_pll.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sdram_physical_pll.do" 
+# Start time: 19:21:44 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_sdram_physical_pll
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_sdram_physical
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_ram_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_as_ram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_init_ref
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_PHY_SDRAM_2M_32
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_2mx32_model
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.pll_sdram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_LOGIC_BUFG
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_PHY_PLL
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_dphase_sel
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.prediv_mux
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_pll_div2
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_clko_premux
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_pll_div128
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_clko_ctrl
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'load_reg'. The port definition is at: D:/TD/sim_release/eg4/eg_phy_pll.v(25).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_sdram_physical_pll/qualification/real_clock/u_pll/pll_inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/pll_sdram.v Line: 68
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sdram_physical_pll.do}
+# ******************** : The Attribute            REFCLK_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             FBCLK_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           3.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC0_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           7.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC1_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           7.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC2_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC3_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC4_DIV on pll instance tb_sdram_physical_pll.qualification.real_clock.u_pll.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# SDRAM_MODE BL=4 CL=3 sequential=1 write_single=0
+# PHYSICAL_BLOCK base=00000000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=000000f0 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=0004b000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=00100000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=001fffc0 words=64 output_latency=10 downstream_latency=11
+# PASS: tb_sdram_physical_pll actual generated PLL 150MHz/180deg; words=448 writes=324 reads=448 refreshes=1
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_sdram_physical.sv(64)
+#    Time: 884507819400 fs  Iteration: 0  Instance: /tb_sdram_physical_pll/qualification
+# End time: 19:22:23 on Oct 25,2026, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 1

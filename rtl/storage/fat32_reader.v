@@ -4,7 +4,9 @@
 // Directory chains and file chains both follow FAT, including fragmented files.
 `timescale 1ns/1ps
 `default_nettype none
-module fat32_reader (
+module fat32_reader #(parameter NAMED_FILE=0, parameter [87:0] SHORT_NAME="BGM     WAV") (
+    input wire bookmark_valid, loop_restart,
+    input wire [31:0] loop_length,
     input  wire        clk,
     input  wire        rst_n,
     input  wire        card_ready,
@@ -99,6 +101,12 @@ module fat32_reader (
     reg [31:0] entry_size;
     reg [8:0]  file_offset;
     reg [31:0] bytes_left;
+    reg bookmark_saved,seek_first;
+    reg [31:0] bookmark_cluster,bookmark_length;
+    reg [7:0] bookmark_sector;
+    reg [8:0] bookmark_offset;
+    reg cached_file;
+    reg [31:0] cached_cluster, cached_size;
     reg [1:0]  fat_byte;
     reg [31:0] fat_entry;
     function [2:0] sector_shift;
@@ -209,6 +217,8 @@ module fat32_reader (
             buf_rd_addr <= 0;
             open_done <= 0;
             file_size <= 0;
+            bookmark_saved<=0;seek_first<=0;bookmark_cluster<=0;bookmark_length<=0;bookmark_sector<=0;bookmark_offset<=0;
+            cached_file<=0;cached_cluster<=0;cached_size<=0;
             file_data <= 0;
             file_done <= 0;
             mount_done <= 0;
@@ -273,7 +283,16 @@ module fat32_reader (
             file_done <= 1'b0;
             if (buffer_error) begin
                 report_error(E_IO, 1'b1);
+            end else if(NAMED_FILE && loop_restart && bookmark_saved) begin
+                current_cluster<=bookmark_cluster;sector_in_cluster<=bookmark_sector;
+                bytes_left<=bookmark_length;clusters_seen<=1;seek_first<=1;
+                state<=S_FILE_SECTOR;
             end else begin
+                if(NAMED_FILE && bookmark_valid && state==S_FILE_SEND && file_ready) begin
+                    bookmark_saved<=1;bookmark_cluster<=current_cluster;
+                    bookmark_sector<=sector_in_cluster;bookmark_offset<=file_offset;
+                    bookmark_length<=loop_length;
+                end
                 case (state)
                     S_WAIT_CARD: if (card_ready) read_sector(32'd0, S_BOOT_BEGIN);
                     S_BOOT_BEGIN: begin
@@ -402,7 +421,11 @@ module fat32_reader (
                         error <= 1'b0;
                         error_code <= 8'h00;
                         file_size <= 0;
-                        if (open_index >= image_count) begin
+                        if(NAMED_FILE && cached_file) begin
+                            file_size<=cached_size;bytes_left<=cached_size;open_done<=1;
+                            current_cluster<=cached_cluster;sector_in_cluster<=0;clusters_seen<=1;
+                            state<=S_FILE_SECTOR;
+                        end else if (open_index >= image_count) begin
                             report_error(E_BAD_NAME, 1'b0);
                         end else begin
                             target_index <= open_index;
@@ -456,14 +479,15 @@ module fat32_reader (
                             else report_error(E_NOT_FOUND, 1'b0);
                         end else if ((entry_name[87:80] != 8'hE5)
                             && ((entry_attr & 8'h18) == 0)
-                            && (entry_name[23:0] == 24'h424D50)
-                            && (entry_size >= 32'd54)
+                            && (NAMED_FILE ? entry_name==SHORT_NAME : entry_name[23:0]==24'h424D50)
+                            && (entry_size >= (NAMED_FILE ? 32'd12 : 32'd54))
                             && (found_cluster >= 2) && (found_cluster <= last_cluster)) begin
                             if (scanning_catalog) begin
                                 image_count <= image_count + 1'b1;
                                 if (image_count == 16'hFFFE) finish_catalog;
                                 else state <= S_DIR_NEXT;
                             end else if (matched_index == target_index) begin
+                                if(NAMED_FILE) begin cached_file<=1;cached_cluster<=found_cluster;cached_size<=entry_size;end
                                 file_size <= entry_size;
                                 bytes_left <= entry_size;
                                 open_done <= 1'b1;
@@ -491,7 +515,8 @@ module fat32_reader (
                     end
                     S_FILE_SECTOR: read_sector(current_sector_lba[31:0], S_FILE_BEGIN);
                     S_FILE_BEGIN: begin
-                        file_offset <= 0;
+                        file_offset <= seek_first ? bookmark_offset : 9'd0;
+                        seek_first<=0;
                         state <= S_FILE_READ;
                     end
                     S_FILE_READ: read_byte(file_offset, S_FILE_HAVE);

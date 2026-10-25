@@ -1,0 +1,2 @@
+# Keep archived evidence byte-for-byte so snapshot_info.json hashes stay valid.
+/docs/handover_baseline_20261025/** -text

@@ -1,0 +1,12 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_sector_cache glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_sector_cache.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sector_cache.do" 
+# Start time: 19:27:00 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_sector_cache
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sd_sector_buffer
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sector_cache.do}
+# PASS: tb_sector_cache 8 full sector comparisons, LRU hits/misses, reset invalidation, requests=5
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_sector_cache.sv(47)
+#    Time: 215920 ns  Iteration: 1  Instance: /tb_sector_cache
+# End time: 19:27:01 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

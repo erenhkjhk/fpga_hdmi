@@ -1,0 +1,279 @@
+{
+  "simulator": "ModelSim Intel FPGA Starter Edition 2020.1",
+  "total": 34,
+  "passed": 34,
+  "tests": [
+    {
+      "test": "tb_vendor_ip",
+      "passed": true,
+      "log": "results\\tb_vendor_ip.log",
+      "result": "PASS: tb_vendor_ip",
+      "errors": [],
+      "warnings": 11
+    },
+    {
+      "test": "tb_pll",
+      "passed": true,
+      "log": "results\\tb_pll.log",
+      "result": "PASS: tb_pll actual 150/125/25MHz, SDRAM180degree, reset and relock",
+      "errors": [],
+      "warnings": 2
+    },
+    {
+      "test": "tb_init_probe",
+      "passed": true,
+      "log": "results\\tb_init_probe.log",
+      "result": "PASS: tb_init_probe",
+      "errors": [],
+      "warnings": 33
+    },
+    {
+      "test": "tb_bmp+CASE=0",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_0.log",
+      "result": "PASS: tb_bmp CASE=0 W=1 H=1 pixels=307200 cycles=2611272",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=1",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_1.log",
+      "result": "PASS: tb_bmp CASE=1 W=3 H=2 pixels=307200 cycles=2611297",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=2",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_2.log",
+      "result": "PASS: tb_bmp CASE=2 W=641 H=481 pixels=307200 cycles=4046344",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=3",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_3.log",
+      "result": "PASS: tb_bmp CASE=3 W=1920 H=1080 pixels=307200 cycles=12284501",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=4",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_4.log",
+      "result": "PASS: tb_bmp CASE=4 W=2048 H=1 pixels=307200 cycles=2620817",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=5",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_5.log",
+      "result": "PASS: tb_bmp CASE=5 W=3 H=2 pixels=0 cycles=95",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_bmp+CASE=6",
+      "passed": true,
+      "log": "results\\tb_bmp_CASE_6.log",
+      "result": "PASS: tb_bmp CASE=6 W=3 H=2 pixels=0 cycles=68",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_wav+CASE=0",
+      "passed": true,
+      "log": "results\\tb_wav_CASE_0.log",
+      "result": "PASS: tb_wav CASE=0 words=198 loops=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_wav+CASE=1",
+      "passed": true,
+      "log": "results\\tb_wav_CASE_1.log",
+      "result": "PASS: tb_wav CASE=1 words=0 loops=0",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_wav+CASE=2",
+      "passed": true,
+      "log": "results\\tb_wav_CASE_2.log",
+      "result": "PASS: tb_wav CASE=2 words=0 loops=0",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_wav+CASE=3",
+      "passed": true,
+      "log": "results\\tb_wav_CASE_3.log",
+      "result": "PASS: tb_wav CASE=3 words=0 loops=0",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_wav+CASE=4",
+      "passed": true,
+      "log": "results\\tb_wav_CASE_4.log",
+      "result": "PASS: tb_wav CASE=4 words=0 loops=0",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_controls",
+      "passed": true,
+      "log": "results\\tb_controls.log",
+      "result": "PASS: tb_controls",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_slideshow",
+      "passed": true,
+      "log": "results\\tb_slideshow.log",
+      "result": "PASS: tb_slideshow pending key direction, transition lock, auto dwell after commit",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_osd",
+      "passed": true,
+      "log": "results\\tb_osd.log",
+      "result": "PASS: tb_osd full frame + 16 adjustment combinations + frame-latched update",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_pcm",
+      "passed": true,
+      "log": "results\\tb_pcm.log",
+      "result": "PASS: tb_pcm 48kHz cadence, underrun/silence/rebuffer, tag recovery, fallback, ACR, played-sample CDC",
+      "errors": [],
+      "warnings": 11
+    },
+    {
+      "test": "tb_dft+CASE=0",
+      "passed": true,
+      "log": "results\\tb_dft_CASE_0.log",
+      "result": "PASS: tb_dft CASE=0 windows=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_dft+CASE=1",
+      "passed": true,
+      "log": "results\\tb_dft_CASE_1.log",
+      "result": "PASS: tb_dft CASE=1 windows=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_dft+CASE=2",
+      "passed": true,
+      "log": "results\\tb_dft_CASE_2.log",
+      "result": "PASS: tb_dft CASE=2 windows=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_dft+CASE=3",
+      "passed": true,
+      "log": "results\\tb_dft_CASE_3.log",
+      "result": "PASS: tb_dft CASE=3 windows=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_dft+CASE=4",
+      "passed": true,
+      "log": "results\\tb_dft_CASE_4.log",
+      "result": "PASS: tb_dft CASE=4 windows=3",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_fat_media",
+      "passed": true,
+      "log": "results\\tb_fat_media.log",
+      "result": "PASS: tb_fat_media two independent file contexts; data offset510; fragmented 5->9; 4 loops; PCM words=264 transactions=17",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_memory_integration",
+      "passed": true,
+      "log": "results\\tb_memory_integration.log",
+      "result": "PASS: tb_memory_integration two full image writes; 61 transition endpoints; audio ring wrap; samples=428 refreshes=475",
+      "errors": [],
+      "warnings": 44
+    },
+    {
+      "test": "tb_memory_integration+STREAM",
+      "passed": true,
+      "log": "results\\tb_memory_integration_STREAM.log",
+      "result": "PASS: tb_memory_integration STREAM full307200 pixels at continuous25Mpixel/s with audio + refresh, samples=352",
+      "errors": [],
+      "warnings": 44
+    },
+    {
+      "test": "tb_top_smoke",
+      "passed": true,
+      "log": "results\\tb_top_smoke.log",
+      "result": "PASS: tb_top_smoke actual PLL + SDRAM + HDMI encrypted cores, OSD black background, fallback audio=100",
+      "errors": [],
+      "warnings": 62
+    },
+    {
+      "test": "tb_sdram_physical",
+      "passed": true,
+      "log": "results\\tb_sdram_physical.log",
+      "result": "PASS: tb_sdram_physical words=448 writes=324 reads=448 refreshes=1",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_sdram_physical_pll",
+      "passed": true,
+      "log": "results\\tb_sdram_physical_pll.log",
+      "result": "PASS: tb_sdram_physical_pll actual generated PLL 150MHz/180deg; words=448 writes=324 reads=448 refreshes=1",
+      "errors": [],
+      "warnings": 1
+    },
+    {
+      "test": "tb_sector_cache",
+      "passed": true,
+      "log": "results\\tb_sector_cache.log",
+      "result": "PASS: tb_sector_cache 8 full sector comparisons, LRU hits/misses, reset invalidation, requests=5",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_tf_wav_stream",
+      "passed": true,
+      "log": "results\\tb_tf_wav_stream.log",
+      "result": "PASS: tb_tf_wav_stream physical SPI 5MHz; fragmented WAV; PCM words=64696 played=36434 loops=16 sectors=416 queued=28262",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_hdmi_serial_sink",
+      "passed": true,
+      "log": "results\\tb_hdmi_serial_sink.log",
+      "result": "PASS: tb_hdmi_serial_sink 640 physical pixels; active RGB AB55AB shares guard words; LSB-first alignment",
+      "errors": [],
+      "warnings": 0
+    },
+    {
+      "test": "tb_end_to_end",
+      "passed": true,
+      "log": "results\\tb_end_to_end.log",
+      "result": "PASS: tb_end_to_end TF SPI->FAT32->BMP/WAV->physical SDRAM->real HDMI serial; commits=3 PCM=12506 HDMI_PCM=12506 image_pixels=880000 fade_pixels=160000 refreshes=10470 sectors=178 WAV_loops=7",
+      "errors": [],
+      "warnings": 60
+    }
+  ]
+}

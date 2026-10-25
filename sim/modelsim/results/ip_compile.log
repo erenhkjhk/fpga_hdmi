@@ -1,0 +1,18 @@
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 14:20:12 on Oct 25,2026
+vlog -sv -work sim/modelsim/build/work C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\pll_hdmi.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\pll_sdram.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\ram_audio_window.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\ram_blend_block.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\ram_scale_line1.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\rom_anlogic_logo.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\rom_dft_twiddle.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\rom_dft_window.v C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\rom_osd_font.v al_ip/fifo_pixel_async/fifo_pixel_async.v al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v sim/modelsim/tests/tb_vendor_ip.sv 
+-- Compiling module pll_hdmi
+** Error: (vlog-13069) C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\pll_hdmi.v(84): near "do": syntax error, unexpected "SystemVerilog keyword 'do'", expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER or '*'.
+-- Compiling module pll_sdram
+** Error: (vlog-13069) C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\al_ip\pll_sdram.v(84): near "do": syntax error, unexpected "SystemVerilog keyword 'do'", expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER or '*'.
+-- Compiling module ram_audio_window
+-- Compiling module ram_blend_block
+-- Compiling module ram_scale_line1
+-- Compiling module rom_anlogic_logo
+-- Compiling module rom_dft_twiddle
+-- Compiling module rom_dft_window
+-- Compiling module rom_osd_font
+-- Compiling module fifo_pixel_async
+-- Compiling module tb_vendor_ip
+End time: 14:20:13 on Oct 25,2026, Elapsed time: 0:00:01
+Errors: 2, Warnings: 0

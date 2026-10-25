@@ -1,0 +1,54 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_init_probe glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_init_probe.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_init_probe.do" 
+# Start time: 14:42:44 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_init_probe
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xh'.  Expected 18, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_init_probe/xh File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv Line: 5
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(5): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xd'.  Expected 18, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_init_probe/xd File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv Line: 7
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(7): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xm'.  Expected 18, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_init_probe/xm File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv Line: 9
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(9): [TFMPC] - Missing connection for port '<protected>'.
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_init_probe.do}
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# INIT_PROBE hex=xxxxxxxx dath=7fff0000 mif=xxxxxxxx
+# PASS: tb_init_probe
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_init_probe.sv(13)
+#    Time: 2 us  Iteration: 0  Instance: /tb_init_probe
+# End time: 14:42:44 on Oct 25,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 33

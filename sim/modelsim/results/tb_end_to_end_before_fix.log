@@ -1,0 +1,206 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work tb_end_to_end glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_end_to_end.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_end_to_end.do" 
+# Start time: 15:15:56 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.tb_end_to_end
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.fpga_hdmi_top
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.pll_sdram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.pll_hdmi
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.reset_sync
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.key_debounce
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.cdc_level
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.fat32_media_top
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.fat32_reader
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sd_sector_buffer
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sd_spi_card
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.spi_byte_master
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sd_spi_cmd
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.bmp24_decoder
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.bilinear_scaler
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.ram_scale_line1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.fifo_pixel_async
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.cdc_mailbox
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdram_ram_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdr_as_ram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdr_init_ref
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.EG_PHY_SDRAM_2M_32
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.wav_pcm_reader
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.media_async_fifo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdram_frame_store
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.ram_blend_block
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.slideshow_control
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.video_stream_640x480
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.pcm_player
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.i2s_test_tone
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.i2s_stereo_receiver
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.hdmi_acr_48k
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.spectrum_dft
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.rom_dft_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.rom_dft_twiddle
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.ram_audio_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.uptime_counter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.switch_filter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.video_compositor
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.rom_osd_font
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.rom_anlogic_logo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.hdmi_tx_640x480
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.hdmi_1_4b_transmitter_core_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.hdmi_phy_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.lane_lvds_10_1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdhc_spi_model
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.sdram_2mx32_model
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.hdmi_serial_sink
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.glbl
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.EG_LOGIC_RAMFIFO
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.gray_count
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.showahead_buffer
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.gray2bin
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\e2e_work.EG_LOGIC_ODDR
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_load_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_load_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_load_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_video_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_video_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_video_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (24) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_end_to_end/dut/u_hdmi/u_hdmi_core/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_end_to_end.do}
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# HDMI_SERIAL_ALIGNED clock=0000011111
+# SDRAM_MODE BL=4 CL=3 sequential=1 write_single=0
+# E2E_PROGRESS t=       5000000000000 sd=1 mount=0 count=0 state=0 words=0 image=0 frame=1 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=1 hdmi_frames=1 packets=107 acr=2
+# E2E_PROGRESS t=      10000000000000 sd=1 mount=1 count=2 state=0 words=0 image=0 frame=1 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=6 hdmi_frames=1 packets=347 acr=7
+# E2E_PROGRESS t=      15000000000000 sd=1 mount=1 count=2 state=0 words=18304 image=0 frame=1 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=12 hdmi_frames=1 packets=586 acr=12
+# E2E_PROGRESS t=      20000000000000 sd=1 mount=1 count=2 state=0 words=49536 image=0 frame=2 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=17 hdmi_frames=2 packets=828 acr=17
+# E2E_PROGRESS t=      25000000000000 sd=1 mount=1 count=2 state=0 words=80768 image=0 frame=2 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=22 hdmi_frames=2 packets=1067 acr=22
+# E2E_PROGRESS t=      30000000000000 sd=1 mount=1 count=2 state=0 words=112000 image=0 frame=2 commits=0 pcm=0 serial_pcm=0 rgb=0 fade=0 sectors=28 hdmi_frames=2 packets=1307 acr=27
+# E2E_PROGRESS t=      35000000000000 sd=1 mount=1 count=2 state=0 words=143296 image=0 frame=2 commits=0 pcm=118 serial_pcm=116 rgb=0 fade=0 sectors=30 hdmi_frames=2 packets=1546 acr=32
+# E2E_PROGRESS t=      40000000000000 sd=1 mount=1 count=2 state=0 words=174528 image=0 frame=3 commits=0 pcm=358 serial_pcm=358 rgb=0 fade=0 sectors=32 hdmi_frames=3 packets=1788 acr=37
+# E2E_PROGRESS t=      45000000000000 sd=1 mount=1 count=2 state=0 words=205760 image=0 frame=3 commits=0 pcm=598 serial_pcm=597 rgb=0 fade=0 sectors=37 hdmi_frames=3 packets=2027 acr=42
+# E2E_PROGRESS t=      50000000000000 sd=1 mount=1 count=2 state=0 words=236992 image=0 frame=3 commits=0 pcm=838 serial_pcm=837 rgb=0 fade=0 sectors=43 hdmi_frames=3 packets=2267 acr=47
+# E2E_PROGRESS t=      55000000000000 sd=1 mount=1 count=2 state=0 words=268224 image=0 frame=4 commits=0 pcm=1078 serial_pcm=1076 rgb=0 fade=0 sectors=48 hdmi_frames=4 packets=2506 acr=52
+# E2E_PROGRESS t=      60000000000000 sd=1 mount=1 count=2 state=0 words=299520 image=0 frame=4 commits=0 pcm=1318 serial_pcm=1318 rgb=0 fade=0 sectors=54 hdmi_frames=4 packets=2748 acr=57
+# E2E_PROGRESS t=      65000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=0 frame=4 commits=0 pcm=1558 serial_pcm=1557 rgb=0 fade=0 sectors=59 hdmi_frames=4 packets=2987 acr=62
+# E2E_COMMIT count=1 t=      68511090000000
+# E2E_PROGRESS t=      70000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=5 commits=1 pcm=1798 serial_pcm=1797 rgb=0 fade=0 sectors=64 hdmi_frames=5 packets=3227 acr=67
+# E2E_PROGRESS t=      75000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=5 commits=1 pcm=2038 serial_pcm=2036 rgb=23200 fade=0 sectors=70 hdmi_frames=5 packets=3466 acr=72
+# HDMI_SEQUENCE phase=1 center=204060 t_ms=76.365
+# E2E_NEXT_KEY
+# E2E_PROGRESS t=      80000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=5 commits=1 pcm=2278 serial_pcm=2278 rgb=80000 fade=0 sectors=75 hdmi_frames=5 packets=3708 acr=77
+# E2E_PROGRESS t=      85000000000000 sd=1 mount=1 count=2 state=0 words=11840 image=1 frame=5 commits=1 pcm=2518 serial_pcm=2517 rgb=80000 fade=0 sectors=81 hdmi_frames=5 packets=3947 acr=82
+# HDMI_FRAME_EXPORTED RGB=204060 pixels=307200
+# E2E_PROGRESS t=      90000000000000 sd=1 mount=1 count=2 state=6 words=43072 image=1 frame=6 commits=1 pcm=2758 serial_pcm=2757 rgb=80697 fade=0 sectors=86 hdmi_frames=6 packets=4187 acr=87
+# E2E_PROGRESS t=      95000000000000 sd=1 mount=1 count=2 state=0 words=74304 image=1 frame=6 commits=1 pcm=2998 serial_pcm=2996 rgb=143200 fade=0 sectors=91 hdmi_frames=6 packets=4426 acr=92
+# E2E_PROGRESS t=     100000000000000 sd=1 mount=1 count=2 state=0 words=105600 image=1 frame=6 commits=1 pcm=3238 serial_pcm=3238 rgb=160000 fade=0 sectors=97 hdmi_frames=6 packets=4668 acr=97
+# E2E_PROGRESS t=     105000000000000 sd=1 mount=1 count=2 state=0 words=136832 image=1 frame=7 commits=1 pcm=3478 serial_pcm=3477 rgb=160000 fade=0 sectors=102 hdmi_frames=7 packets=4907 acr=102
+# E2E_PROGRESS t=     110000000000000 sd=1 mount=1 count=2 state=0 words=168064 image=1 frame=7 commits=1 pcm=3718 serial_pcm=3717 rgb=200697 fade=0 sectors=107 hdmi_frames=7 packets=5147 acr=107
+# E2E_PROGRESS t=     115000000000000 sd=1 mount=1 count=2 state=0 words=199296 image=1 frame=7 commits=1 pcm=3958 serial_pcm=3956 rgb=240000 fade=0 sectors=113 hdmi_frames=7 packets=5386 acr=112
+# E2E_PROGRESS t=     120000000000000 sd=1 mount=1 count=2 state=0 words=230528 image=1 frame=7 commits=1 pcm=4198 serial_pcm=4198 rgb=240000 fade=0 sectors=118 hdmi_frames=7 packets=5628 acr=117
+# E2E_PROGRESS t=     125000000000000 sd=1 mount=1 count=2 state=0 words=261824 image=1 frame=8 commits=1 pcm=4438 serial_pcm=4437 rgb=258097 fade=0 sectors=123 hdmi_frames=8 packets=5867 acr=122
+# E2E_PROGRESS t=     130000000000000 sd=1 mount=1 count=2 state=0 words=293056 image=1 frame=8 commits=1 pcm=4678 serial_pcm=4677 rgb=320000 fade=0 sectors=129 hdmi_frames=8 packets=6107 acr=127
+# E2E_PROGRESS t=     135000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=8 commits=1 pcm=4918 serial_pcm=4916 rgb=320000 fade=0 sectors=134 hdmi_frames=8 packets=6346 acr=132
+# E2E_PROGRESS t=     140000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=9 commits=1 pcm=5158 serial_pcm=5158 rgb=320000 fade=0 sectors=140 hdmi_frames=9 packets=6588 acr=137
+# E2E_PROGRESS t=     145000000000000 sd=1 mount=1 count=2 state=4 words=307200 image=1 frame=9 commits=1 pcm=5398 serial_pcm=5397 rgb=378097 fade=0 sectors=145 hdmi_frames=9 packets=6827 acr=142
+# E2E_PROGRESS t=     150000000000000 sd=1 mount=1 count=2 state=14 words=307200 image=1 frame=9 commits=1 pcm=5638 serial_pcm=5637 rgb=400000 fade=0 sectors=150 hdmi_frames=9 packets=7067 acr=147
+# E2E_PROGRESS t=     155000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=10 commits=1 pcm=5878 serial_pcm=5876 rgb=400000 fade=0 sectors=156 hdmi_frames=10 packets=7306 acr=152
+# E2E_PROGRESS t=     160000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=10 commits=1 pcm=6118 serial_pcm=6118 rgb=400000 fade=35600 sectors=161 hdmi_frames=10 packets=7548 acr=157
+# HDMI_SEQUENCE phase=2 center=707070 t_ms=160.365
+# E2E_PROGRESS t=     165000000000000 sd=1 mount=1 count=2 state=4 words=307200 image=1 frame=10 commits=1 pcm=6358 serial_pcm=6357 rgb=400000 fade=80000 sectors=166 hdmi_frames=10 packets=7787 acr=162
+# HDMI_FRAME_EXPORTED RGB=707070 pixels=307200
+# E2E_COMMIT count=2 t=     169311093000000
+# E2E_PROGRESS t=     170000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=10 commits=2 pcm=6598 serial_pcm=6597 rgb=400000 fade=80000 sectors=172 hdmi_frames=10 packets=8027 acr=167
+# E2E_PROGRESS t=     175000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=11 commits=2 pcm=6838 serial_pcm=6836 rgb=413200 fade=80000 sectors=177 hdmi_frames=11 packets=8266 acr=172
+# HDMI_SEQUENCE phase=3 center=c0a080 t_ms=177.165
+# E2E_PROGRESS t=     180000000000000 sd=1 mount=1 count=2 state=0 words=307200 image=1 frame=11 commits=2 pcm=7078 serial_pcm=7078 rgb=475600 fade=80000 sectors=183 hdmi_frames=11 packets=8508 acr=177
+# E2E_PREVIOUS_KEY
+# ** Fatal: E2E PCM discontinuity pair=7232 left=000000 right=000000 expected=e3a7f9
+#    Time: 183225500 ns  Scope: tb_end_to_end File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_end_to_end.sv Line: 54
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_end_to_end.sv(54)
+#    Time: 183225500 ns  Iteration: 1  Instance: /tb_end_to_end
+# End time: 15:54:10 on Oct 25,2026, Elapsed time: 0:38:14
+# Errors: 1, Warnings: 60

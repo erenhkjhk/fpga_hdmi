@@ -48,6 +48,7 @@ module fat32_read_top #(
     wire        sd_r_valid, sd_r_ready, sd_r_last;
     wire        sd_done, sd_error;
     fat32_reader u_fat32_reader (
+        .bookmark_valid(1'b0),.loop_restart(1'b0),.loop_length(32'd0),
         .clk(clk), .rst_n(rst_n), .card_ready(sd_init_done),
         .open_valid(open_valid), .open_ready(open_ready), .open_index(open_index), .image_count(image_count), .catalog_ready(catalog_ready),
         .open_done(open_done), .file_size(file_size),

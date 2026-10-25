@@ -1,0 +1,44 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_vendor_ip glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_vendor_ip.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_vendor_ip.do" 
+# Start time: 19:18:41 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_vendor_ip
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_scale_line1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_blend_block
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_audio_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_osd_font
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_anlogic_logo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_dft_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_dft_twiddle
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fifo_pixel_async
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vendor_ip/fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_vendor_ip/fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_vendor_ip/fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_vendor_ip.do}
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# OBSERVE RAM reset cea=0 q=000000/000000/000000
+# CONFIRMED FIFO: 1023 words; normal valid/data ordered; both reset-done handshakes.
+# CONFIRMED RAM/ROM: two-edge OUTREG; synchronous reset; contents retained; all ROM words match.
+# PASS: tb_vendor_ip
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_vendor_ip.sv(59)
+#    Time: 329011 ns  Iteration: 0  Instance: /tb_vendor_ip
+# End time: 19:18:42 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 11

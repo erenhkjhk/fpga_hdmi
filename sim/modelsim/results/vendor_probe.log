@@ -1,0 +1,44 @@
+# vsim -c -lib C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work tb_vendor_ip glbl -l ../sim/modelsim/results/vendor_probe.log -do "onerror {quit -code 2}; onbreak {quit -code 3}; run -all; quit -code 0" 
+# Start time: 14:20:14 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.tb_vendor_ip
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.ram_scale_line1
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.ram_blend_block
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.ram_audio_window
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.rom_osd_font
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.rom_anlogic_logo
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.rom_dft_window
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.rom_dft_twiddle
+# Loading C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/build/work.glbl
+# onerror {quit -code 2}
+#  Warning: onerror command for use within macro
+#  onbreak {quit -code 3}
+#  Warning: onbreak command for use within macro
+#  run -all
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# READ0 t=             1051000 q=xxxxxx
+# READ0 t=             1071000 q=123456
+# READ0 t=             1091000 q=123456
+# READ1 t=             1111000 q=123456
+# READ1 t=             1131000 q=abcdef
+# READ1 t=             1151000 q=abcdef
+# BEFORE_RESET_EDGE q=abcdef
+# RESET t=             1171000 q=000000
+# RESET t=             1191000 q=000000
+# RESET t=             1211000 q=000000
+# RESTORE t=             1231000 q=abcdef
+# RESTORE t=             1251000 q=123456
+# RESTORE t=             1271000 q=123456
+# RESTORE t=             1291000 q=123456
+# PROBE_COMPLETE
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_vendor_ip.sv(36)
+#    Time: 1291 ns  Iteration: 0  Instance: /tb_vendor_ip
+# End time: 14:20:15 on Oct 25,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

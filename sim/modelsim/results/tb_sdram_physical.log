@@ -1,0 +1,22 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_sdram_physical glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_sdram_physical.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sdram_physical.do" 
+# Start time: 19:18:49 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_sdram_physical
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_ram_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_as_ram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_init_ref
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_PHY_SDRAM_2M_32
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_2mx32_model
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_sdram_physical.do}
+# SDRAM_MODE BL=4 CL=3 sequential=1 write_single=0
+# PHYSICAL_BLOCK base=00000000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=000000f0 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=0004b000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=00100000 words=64 output_latency=10 downstream_latency=11
+# PHYSICAL_BLOCK base=001fffc0 words=64 output_latency=10 downstream_latency=11
+# PASS: tb_sdram_physical words=448 writes=324 reads=448 refreshes=1
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_sdram_physical.sv(55)
+#    Time: 883584966 ps  Iteration: 1  Instance: /tb_sdram_physical
+# End time: 19:18:51 on Oct 25,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

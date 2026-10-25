@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "pillow_version": "12.3.0",
+  "font": {
+    "width_bits": 8,
+    "depth_words": 8192,
+    "map_file": "font_map.json",
+    "chinese_count": 28,
+    "source_fonts": {
+      "ascii": {
+        "name": [
+          "Consolas",
+          "Regular"
+        ],
+        "raster_size": 13,
+        "baseline_y": 12,
+        "sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179"
+      },
+      "chinese": {
+        "name": [
+          "SimSun",
+          "Regular"
+        ],
+        "raster_size": 16,
+        "collection_index": 0,
+        "sha256": "1526ac24375f51f6eb73bc2d3f8072dbe4a80a3a65217677c9d9a84f67dab2ab"
+      }
+    }
+  },
+  "logo": {
+    "width": 128,
+    "height": 64,
+    "width_bits": 16,
+    "depth_words": 8192,
+    "pixel_format": "ARGB4444; [15:12]A [11:8]R [7:4]G [3:0]B",
+    "address": "y*128+x; top to bottom, left to right",
+    "bin_byte_order": "little-endian uint16: low byte then high byte",
+    "hex_format": "one 16-bit word per line, four hexadecimal digits, no header",
+    "alpha": "0=transparent; 15=opaque",
+    "source": "source/anlogic_logo_original.png",
+    "cutout": "source/anlogic_logo_cutout.png",
+    "cutout_method": "built-in imagegen transparent background extraction",
+    "cutout_crop": [
+      116,
+      255,
+      1880,
+      587
+    ],
+    "fitted_size": [
+      124,
+      23
+    ],
+    "offset": [
+      2,
+      20
+    ]
+  },
+  "files": [
+    {
+      "path": "anlogic_logo_128x64.png",
+      "bytes": 1883,
+      "sha256": "ade4cac7299094edb884d34648ac3ce56f3fa35ca2d71df00945986eb3504c39"
+    },
+    {
+      "path": "anlogic_logo_argb4444.bin",
+      "bytes": 16384,
+      "sha256": "82a6d154c39112da014b81ed3a5fadc18006a8a9b68fd73a100364c2f857f7b1"
+    },
+    {
+      "path": "anlogic_logo_argb4444.hex",
+      "bytes": 49152,
+      "sha256": "1871d03fece3232077dad8973ef58ec3eee5bc0aaa6ce55072f6a5e38bdd54b9"
+    },
+    {
+      "path": "font_ascii_8x16.bin",
+      "bytes": 2048,
+      "sha256": "90a79449e6246049c02768336f3ff7b0f63ac80c448eb9fd31a6ff607fd66d12"
+    },
+    {
+      "path": "font_ascii_8x16.hex",
+      "bytes": 8192,
+      "sha256": "9ec32d61101f89076b90525744cca4f6c48cdf2b59713d35609a0bbfcc417f11"
+    },
+    {
+      "path": "font_ascii_8x16.png",
+      "bytes": 744,
+      "sha256": "0f8ed0e673e9fd3b41c1585223de6ba4282aa45b4257bf8364a978f5460151d1"
+    },
+    {
+      "path": "font_cn_16x16.bin",
+      "bytes": 4096,
+      "sha256": "7ac63d9951657d210cb5ab9b1aed0122849ed9a2e7ccdc5181b1045b019a2131"
+    },
+    {
+      "path": "font_cn_16x16.hex",
+      "bytes": 16384,
+      "sha256": "1484ce191afdf5280d3a4d6e0636919ab96598e5efd1691a1cd485497c6dcb49"
+    },
+    {
+      "path": "font_cn_16x16.png",
+      "bytes": 833,
+      "sha256": "0d95783a1ad7cfec3d3d8d67937d3989e1aa2d89b66b7655764bfe7a1a472621"
+    },
+    {
+      "path": "font_cn_chars.txt",
+      "bytes": 86,
+      "sha256": "962e66313cf9aa8f9e1b4d1294e5e3d99f571728768456fcc526d08fc157a86c"
+    },
+    {
+      "path": "font_cn_map.csv",
+      "bytes": 804,
+      "sha256": "75ecaa58f7a60350a432f4bcd3585e5bf1f112682231bb164107f5aeda07f9b8"
+    },
+    {
+      "path": "font_map.json",
+      "bytes": 6763,
+      "sha256": "71e3cd9d123ef3b68f45c8863e407afce755af637b16a82985cf05ee60556829"
+    },
+    {
+      "path": "osd_font_8x8192.bin",
+      "bytes": 8192,
+      "sha256": "52a4256b77bd2ed429312686c7d4d7d99579e5af58e70c4c4d8335b00f8bc93a"
+    },
+    {
+      "path": "osd_font_8x8192.hex",
+      "bytes": 32768,
+      "sha256": "4e6118c38106f1a4c82c8dd9aeeb7812612f6a16545ae6d904e5b8eda03336bc"
+    },
+    {
+      "path": "osd_strings.json",
+      "bytes": 326,
+      "sha256": "ec3c64d9e1a1ea66ec2b22ff14c99593fba648e8d8700cefc4b5242345d3c6ee"
+    },
+    {
+      "path": "osd_text.txt",
+      "bytes": 208,
+      "sha256": "7b3e14c4706619b15b49049e0606715be0ceb490435c0499e0e3ba70804b82f8"
+    },
+    {
+      "path": "preview/font_ascii_labeled.png",
+      "bytes": 23909,
+      "sha256": "b96cd83214881898cea42f5ee403404ebf0fa2f75d9557c2eaf6a4c378295495"
+    },
+    {
+      "path": "preview/font_cn_labeled.png",
+      "bytes": 22096,
+      "sha256": "7f6cec08e05d03f2098c522c5129714d63671026a61360e666a419df487b1ba1"
+    },
+    {
+      "path": "preview/logo_alpha_6x.png",
+      "bytes": 6164,
+      "sha256": "fc1864d202ea74ae5236e373a1164d4a838940fa6816e8a183798500a78fdf77"
+    },
+    {
+      "path": "preview/osd_preview_2x.png",
+      "bytes": 18525,
+      "sha256": "35edf0fe763794b2a0678378385b70ed0aaefffbd9c3c69a5b39663d4cc5fc99"
+    },
+    {
+      "path": "preview/osd_preview_640x480.png",
+      "bytes": 12935,
+      "sha256": "a75ae514a632dde1166232eb8f62334e33a22c2afadbbdf13bbc9e2490dec440"
+    },
+    {
+      "path": "source/anlogic_logo_cutout.png",
+      "bytes": 412422,
+      "sha256": "f91186d9cf43f1e5bd7a96de819c6dbd11d20a5428357255d84be05dac3cadde"
+    },
+    {
+      "path": "source/anlogic_logo_original.png",
+      "bytes": 132847,
+      "sha256": "625dd4f75b4cd558c63435379823d668090b417944102797bf7f823c8a85aaec"
+    },
+    {
+      "path": "source/logo_processing.txt",
+      "bytes": 1528,
+      "sha256": "0955e9705c4470f0d2fac6ffd2ad5de4550f668511fea30822f0f8e3a6c8c1ba"
+    },
+    {
+      "path": "td_init/anlogic_logo_argb4444.mif",
+      "bytes": 106580,
+      "sha256": "02318a5d6acd370e73beb1f21ebfaf083afa22e0e0aabded2a49f7cde5c75037"
+    },
+    {
+      "path": "td_init/osd_font_8x8192.mif",
+      "bytes": 90195,
+      "sha256": "46ce20bc6f1f30517f9878d628ec45f36569604e88efb8711020f924191a14e5"
+    },
+    {
+      "path": "validation_report.json",
+      "bytes": 507,
+      "sha256": "81849a643cd849035e3805f1f07d7336e8c7cdfbf9ec521a3228af3d19b4f8e0"
+    }
+  ]
+}

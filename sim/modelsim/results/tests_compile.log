@@ -1,0 +1,47 @@
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:03:48 on Oct 25,2026
+vlog -sv -work C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\models\hdmi_serial_sink.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\models\sdhc_spi_model.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\models\sdram_2mx32_model.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_bmp.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_controls.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_dft.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_end_to_end.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_fat_media.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_hdmi_serial_sink.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_init_probe.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_memory_integration.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_osd.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_pcm.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_pll.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_sdram_physical.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_sector_cache.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_slideshow.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_tf_wav_stream.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_top_smoke.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_vendor_ip.sv C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\tests\tb_wav.sv 
+-- Compiling module hdmi_serial_sink
+-- Compiling module sdhc_spi_model
+-- Compiling module sdram_2mx32_model
+-- Compiling module tb_bmp
+-- Compiling module tb_controls
+-- Compiling module tb_dft
+-- Compiling module tb_end_to_end
+-- Compiling module tb_fat_media
+-- Compiling module tb_hdmi_serial_sink
+-- Compiling module tb_init_probe
+-- Compiling module tb_memory_integration
+-- Compiling module tb_osd
+-- Compiling module tb_pcm
+-- Compiling module tb_pll
+-- Compiling module tb_sdram_physical
+-- Compiling module tb_sdram_physical_pll
+-- Compiling module tb_sector_cache
+-- Compiling module tb_slideshow
+-- Compiling module tb_tf_wav_stream
+-- Compiling module tb_top_smoke
+-- Compiling module tb_vendor_ip
+-- Compiling module tb_wav
+
+Top level modules:
+	tb_bmp
+	tb_controls
+	tb_dft
+	tb_end_to_end
+	tb_fat_media
+	tb_hdmi_serial_sink
+	tb_init_probe
+	tb_memory_integration
+	tb_osd
+	tb_pcm
+	tb_pll
+	tb_sdram_physical_pll
+	tb_sector_cache
+	tb_slideshow
+	tb_tf_wav_stream
+	tb_top_smoke
+	tb_vendor_ip
+	tb_wav
+End time: 20:03:48 on Oct 25,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

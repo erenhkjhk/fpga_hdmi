@@ -1,0 +1,76 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_memory_integration glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_memory_integration.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_memory_integration.do" 
+# Start time: 15:12:42 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_memory_integration
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.media_async_fifo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.cdc_level
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fifo_pixel_async
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.pcm_player
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.reset_sync
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_frame_store
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_blend_block
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_memory_integration/loadq/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/loadq/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/loadq/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_memory_integration/audio_load/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_memory_integration/audio_play/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/audio_play/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/audio_play/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_memory_integration/videoq/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/videoq/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_memory_integration/videoq/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_memory_integration.do}
+# CHECK full frame write id=1 at           6146165000; audio played=109
+# CHECK full frame write id=2 at          12297723000; audio played=405
+# PASS: tb_memory_integration two full image writes; 61 transition endpoints; audio ring wrap; samples=428 refreshes=475
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_memory_integration.sv(149)
+#    Time: 12796120 ns  Iteration: 1  Instance: /tb_memory_integration
+# End time: 15:14:06 on Oct 25,2026, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 44

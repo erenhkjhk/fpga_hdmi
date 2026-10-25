@@ -28,7 +28,18 @@ module sd_sector_buffer (
     localparam [1:0] S_IDLE=0, S_REQUEST=1, S_RECEIVE=2, S_ERROR=3;
     reg [1:0] state;
     reg [9:0] receive_count;
-    reg [7:0] memory [0:511];
+    // Two read-only sector cache ways. Retain a frequently reused FAT sector
+    // while streaming data sectors; rereading FAT for every one-sector cluster
+    // otherwise consumes almost half of the 5 MHz SPI bandwidth.
+    // This extends the existing inferred sector RAM by 512 bytes per context.
+    reg [7:0] memory [0:1023];
+    reg [31:0] tag [0:1];
+    reg [1:0] cache_valid;
+    reg active_way,fill_way;
+    wire hit0=cache_valid[0] && tag[0]==load_lba;
+    wire hit1=cache_valid[1] && tag[1]==load_lba;
+    wire replacement_way=!cache_valid[0] ? 1'b0 :
+                         (!cache_valid[1] ? 1'b1 : !active_way);
     wire receive_byte = sd_r_valid && sd_r_ready;
     wire read_enable = rd_en && buf_valid && (state == S_IDLE)
                        && !load_valid && !sd_error && !error;
@@ -38,9 +49,9 @@ module sd_sector_buffer (
                           && !sd_error;
     always @(posedge clk) begin
         if (receive_byte)
-            memory[receive_count[8:0]] <= sd_r_data;
+            memory[{fill_way,receive_count[8:0]}] <= sd_r_data;
         if (read_enable)
-            rd_data <= memory[rd_addr];
+            rd_data <= memory[{active_way,rd_addr}];
     end
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -52,6 +63,11 @@ module sd_sector_buffer (
             error_code    <= 8'h00;
             buf_valid     <= 1'b0;
             rd_valid      <= 1'b0;
+            cache_valid   <= 0;
+            active_way    <= 0;
+            fill_way      <= 0;
+            tag[0]        <= 0;
+            tag[1]        <= 0;
         end else begin
             load_done <= 1'b0;
             rd_valid  <= read_enable;
@@ -60,14 +76,23 @@ module sd_sector_buffer (
                 error_code <= 8'h01;
                 buf_valid  <= 1'b0;
                 rd_valid   <= 1'b0;
+                cache_valid <= 0;
                 state      <= S_ERROR;
             end else begin
                 case (state)
                     S_IDLE: if (load_valid && load_ready) begin
-                        sd_req_lba    <= load_lba;
-                        receive_count <= 10'd0;
-                        buf_valid     <= 1'b0;
-                        state         <= S_REQUEST;
+                        if(hit0 || hit1) begin
+                            active_way <= hit1;
+                            buf_valid <= 1'b1;
+                            load_done <= 1'b1;
+                        end else begin
+                            sd_req_lba    <= load_lba;
+                            receive_count <= 10'd0;
+                            buf_valid     <= 1'b0;
+                            fill_way <= replacement_way;
+                            cache_valid[replacement_way] <= 1'b0;
+                            state         <= S_REQUEST;
+                        end
                     end
                     S_REQUEST: if (sd_req_ready) state <= S_RECEIVE;
                     S_RECEIVE: begin
@@ -83,6 +108,9 @@ module sd_sector_buffer (
                             if (receive_count == 10'd512) begin
                                 buf_valid <= 1'b1;
                                 load_done <= 1'b1;
+                                active_way <= fill_way;
+                                tag[fill_way] <= sd_req_lba;
+                                cache_valid[fill_way] <= 1'b1;
                                 state     <= S_IDLE;
                             end else begin
                                 error      <= 1'b1;

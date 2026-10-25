@@ -1,0 +1,13 @@
+{
+  "slogan": "安路 FPGA 多媒体展示",
+  "uptime_template": "运行 00:00:00",
+  "parameters_template": "亮度:+00 对比:1.0x",
+  "playback_template": "轮播:开 状态:显示",
+  "image_index_template": "图片:00001/00001",
+  "other_states": [
+    "关",
+    "加载",
+    "转场",
+    "错误"
+  ]
+}

@@ -1,0 +1,1078 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/TD/bin/td_commands_prompt.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     30909
+   Run Date =   Sun Oct 25 21:51:52 2026
+
+   Run on =     LAPTOP-EVGM8NVQ
+============================================================
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+RUN-1001 : Using default speed grade: NA
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "open_project -single_run C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/project1.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-5007 WARNING: block identifier is required on this block in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(509)
+HDL-1007 : back to file 'al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v' in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(1)
+HDL-1007 : analyze verilog file al_ip/fifo_pixel_async/fifo_pixel_async.v
+HDL-1007 : analyze verilog file al_ip/pll_hdmi.v
+HDL-1007 : undeclared symbol 'pll_hdmi_open0', assumed default net type 'wire' in al_ip/pll_hdmi.v(78)
+HDL-1007 : undeclared symbol 'pll_hdmi_open8', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open7', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open6', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open5', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open4', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open3', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open2', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open1', assumed default net type 'wire' in al_ip/pll_hdmi.v(84)
+HDL-1007 : undeclared symbol 'pll_hdmi_open11', assumed default net type 'wire' in al_ip/pll_hdmi.v(86)
+HDL-1007 : undeclared symbol 'pll_hdmi_open10', assumed default net type 'wire' in al_ip/pll_hdmi.v(86)
+HDL-1007 : undeclared symbol 'pll_hdmi_open9', assumed default net type 'wire' in al_ip/pll_hdmi.v(86)
+HDL-1007 : analyze verilog file al_ip/pll_sdram.v
+HDL-1007 : undeclared symbol 'pll_sdram_open0', assumed default net type 'wire' in al_ip/pll_sdram.v(78)
+HDL-1007 : undeclared symbol 'pll_sdram_open8', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open7', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open6', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open5', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open4', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open3', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open2', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open1', assumed default net type 'wire' in al_ip/pll_sdram.v(84)
+HDL-1007 : undeclared symbol 'pll_sdram_open11', assumed default net type 'wire' in al_ip/pll_sdram.v(86)
+HDL-1007 : undeclared symbol 'pll_sdram_open10', assumed default net type 'wire' in al_ip/pll_sdram.v(86)
+HDL-1007 : undeclared symbol 'pll_sdram_open9', assumed default net type 'wire' in al_ip/pll_sdram.v(86)
+HDL-1007 : analyze verilog file al_ip/ram_audio_window.v
+HDL-1007 : analyze verilog file al_ip/ram_blend_block.v
+HDL-1007 : analyze verilog file al_ip/ram_scale_line1.v
+HDL-1007 : analyze verilog file al_ip/rom_anlogic_logo.v
+HDL-1007 : analyze verilog file al_ip/rom_dft_twiddle.v
+HDL-1007 : analyze verilog file al_ip/rom_dft_window.v
+HDL-1007 : analyze verilog file al_ip/rom_osd_font.v
+HDL-1007 : analyze verilog file rtl/audio/hdmi_acr_48k.v
+HDL-1007 : analyze verilog file rtl/audio/i2s_stereo_receiver.v
+HDL-1007 : analyze verilog file rtl/audio/i2s_test_tone.v
+HDL-1007 : analyze verilog file rtl/common/cdc_level.v
+HDL-1007 : analyze verilog file rtl/common/cdc_mailbox.v
+HDL-1007 : analyze verilog file rtl/common/reset_sync.v
+HDL-1007 : analyze verilog file rtl/control/key_debounce.v
+HDL-1007 : analyze verilog file rtl/control/slideshow_control.v
+HDL-1007 : analyze verilog file rtl/fpga_hdmi_top.v
+HDL-1007 : analyze verilog file rtl/framebuffer/sdram_frame_store.v
+HDL-1007 : analyze verilog file rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2614)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2716)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2724)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(4936)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(5989)
+HDL-1007 : back to file 'rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(77)
+HDL-1007 : analyze verilog file rtl/hdmi_transmitter/hdmi_phy_warpper.v
+HDL-1007 : analyze verilog file rtl/hdmi_transmitter/hdmi_tx_640x480.v
+HDL-1007 : analyze verilog file rtl/hdmi_transmitter/lane_lvds_10_1.v
+HDL-1007 : analyze verilog file rtl/image/bmp24_decoder.v
+HDL-1007 : analyze verilog file rtl/sdram/sdr_as_ram.enc.v
+HDL-1007 : analyze included file rtl/sdram/global_def.v in rtl/sdram/sdr_as_ram.enc.v(1)
+HDL-1007 : back to file 'rtl/sdram/sdr_as_ram.enc.v' in rtl/sdram/sdr_as_ram.enc.v(1)
+HDL-1007 : back to file 'rtl/sdram/sdr_as_ram.enc.v' in rtl/sdram/sdr_as_ram.enc.v(46)
+HDL-1007 : analyze verilog file rtl/sdram/sdr_init_ref.enc.v
+HDL-1007 : analyze included file rtl/sdram/global_def.v in rtl/sdram/sdr_init_ref.enc.v(1)
+HDL-1007 : back to file 'rtl/sdram/sdr_init_ref.enc.v' in rtl/sdram/sdr_init_ref.enc.v(1)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in rtl/sdram/sdr_init_ref.enc.v(57)
+HDL-1007 : back to file 'rtl/sdram/sdr_init_ref.enc.v' in rtl/sdram/sdr_init_ref.enc.v(149)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in rtl/sdram/sdr_init_ref.enc.v(47)
+HDL-1007 : analyze verilog file rtl/sdram/sdr_wrrd.enc.v
+HDL-1007 : analyze included file rtl/sdram/global_def.v in rtl/sdram/sdr_wrrd.enc.v(1)
+HDL-1007 : back to file 'rtl/sdram/sdr_wrrd.enc.v' in rtl/sdram/sdr_wrrd.enc.v(1)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in rtl/sdram/sdr_wrrd.enc.v(283)
+HDL-1007 : back to file 'rtl/sdram/sdr_wrrd.enc.v' in rtl/sdram/sdr_wrrd.enc.v(15)
+HDL-1007 : analyze verilog file rtl/sdram/sdram_ram_wrapper.v
+HDL-1007 : analyze verilog file rtl/storage/fat32_read_top.v
+HDL-1007 : analyze verilog file rtl/storage/fat32_reader.v
+HDL-1007 : analyze verilog file rtl/storage/sd_sector_buffer.v
+HDL-1007 : analyze verilog file rtl/storage/sd_spi_card.v
+HDL-1007 : analyze verilog file rtl/storage/sd_spi_cmd.v
+HDL-1007 : analyze verilog file rtl/storage/spi_byte_master.v
+HDL-1007 : analyze verilog file rtl/video/video_stream_640x480.v
+HDL-1007 : analyze verilog file rtl/common/media_async_fifo.v
+HDL-1007 : analyze verilog file rtl/control/uptime_counter.v
+HDL-1007 : analyze verilog file rtl/image/bilinear_scaler.v
+HDL-1007 : analyze verilog file rtl/storage/fat32_media_top.v
+HDL-1007 : analyze verilog file rtl/audio/wav_pcm_reader.v
+HDL-1007 : analyze verilog file rtl/audio/pcm_player.v
+HDL-1007 : analyze verilog file rtl/audio/spectrum_dft.v
+HDL-1007 : analyze verilog file rtl/video/video_compositor.v
+HDL-1007 : analyze verilog file rtl/control/switch_filter.v
+PRJ-1401 : Successfully analyzed 47 source files.
+RUN-1002 : start command "elaborate -top fpga_hdmi_top"
+HDL-1007 : elaborate module fpga_hdmi_top in rtl/fpga_hdmi_top.v(7)
+HDL-1007 : elaborate module pll_sdram in al_ip/pll_sdram.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:\TD\arch/eagle_macro.v(5)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",FBCLK_DIV=3,CLKC0_DIV=7,CLKC1_DIV=7,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC1_FPHASE=4,CLKC0_CPHASE=6,CLKC1_CPHASE=2,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:\TD\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module pll_hdmi in al_ip/pll_hdmi.v(23)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=2,FBCLK_DIV=5,CLKC0_DIV=8,CLKC1_DIV=40,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,CLKC1_CPHASE=39,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\TD\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module reset_sync in rtl/common/reset_sync.v(5)
+HDL-1007 : elaborate module key_debounce in rtl/control/key_debounce.v(4)
+HDL-1007 : elaborate module cdc_level in rtl/common/cdc_level.v(5)
+HDL-1007 : elaborate module fat32_media_top in rtl/storage/fat32_media_top.v(4)
+HDL-1007 : elaborate module fat32_reader in rtl/storage/fat32_reader.v(7)
+HDL-1007 : elaborate module sd_sector_buffer in rtl/storage/sd_sector_buffer.v(4)
+HDL-1007 : extracting RAM for identifier 'memory' in rtl/storage/sd_sector_buffer.v(35)
+HDL-1007 : elaborate module fat32_reader(NAMED_FILE=1) in rtl/storage/fat32_reader.v(7)
+HDL-1007 : elaborate module sd_spi_card in rtl/storage/sd_spi_card.v(5)
+HDL-1007 : elaborate module spi_byte_master in rtl/storage/spi_byte_master.v(4)
+HDL-1007 : elaborate module sd_spi_cmd in rtl/storage/sd_spi_cmd.v(5)
+HDL-1007 : elaborate module bmp24_decoder in rtl/image/bmp24_decoder.v(6)
+HDL-1007 : elaborate module bilinear_scaler in rtl/image/bilinear_scaler.v(5)
+HDL-1007 : elaborate module ram_scale_line1 in al_ip/ram_scale_line1.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=24,DATA_WIDTH_B=24,ADDR_WIDTH_A=11,ADDR_WIDTH_B=11,DATA_DEPTH_A=2048,DATA_DEPTH_B=2048,MODE="SP",REGMODE_A="OUTREG",IMPLEMENT="9K(FAST)") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : port 'rst' remains unconnected for this instance in al_ip/fifo_pixel_async/fifo_pixel_async.v(34)
+HDL-1007 : port 'srst' remains unconnected for this instance in al_ip/fifo_pixel_async/fifo_pixel_async.v(34)
+HDL-1007 : port 'clk' remains unconnected for this instance in al_ip/fifo_pixel_async/fifo_pixel_async.v(34)
+HDL-1007 : elaborate module fifo_pixel_async in al_ip/fifo_pixel_async/fifo_pixel_async.v(10)
+HDL-1007 : port '**' remains unconnected for this instance in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(290)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(2)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(667)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(848)
+HDL-1007 : extracting RAM for identifier '**' in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(952)
+HDL-5323 WARNING: input port '**' remains unconnected for this instance in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(813)
+HDL-5317 WARNING: input port '**' is not connected on this instance in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(813)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(410)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(1649)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(1564)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(1721)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(1722)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(2470)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(2262)
+HDL-1007 : elaborate module ** in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(2767)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(86)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(87)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(88)
+HDL-5314 WARNING: net '**' does not have a driver in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(89)
+HDL-5317 WARNING: input port 'rst' is not connected on this instance in al_ip/fifo_pixel_async/fifo_pixel_async.v(52)
+HDL-1007 : elaborate module cdc_mailbox in rtl/common/cdc_mailbox.v(6)
+HDL-1007 : elaborate module sdram_ram_wrapper(SELF_REFRESH_OPEN=1'b0) in rtl/sdram/sdram_ram_wrapper.v(5)
+HDL-1007 : elaborate module sdr_as_ram(self_refresh_open=1'b0) in rtl/sdram/sdr_as_ram.enc.v(13)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in rtl/sdram/sdr_init_ref.enc.v(47)
+HDL-1007 : elaborate module sdr_init_ref(self_refresh_open=1'b0) in rtl/sdram/sdr_init_ref.enc.v(13)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in rtl/sdram/sdr_wrrd.enc.v(283)
+HDL-1007 : elaborate module ** in rtl/sdram/sdr_wrrd.enc.v(3)
+HDL-5317 WARNING: input port '**' is not connected on this instance in rtl/sdram/sdr_as_ram.enc.v(17)
+HDL-1007 : elaborate module EG_PHY_SDRAM_2M_32 in D:\TD\arch/eagle_macro.v(683)
+HDL-1007 : elaborate module wav_pcm_reader in rtl/audio/wav_pcm_reader.v(5)
+HDL-1007 : elaborate module media_async_fifo in rtl/common/media_async_fifo.v(4)
+HDL-1007 : elaborate module sdram_frame_store in rtl/framebuffer/sdram_frame_store.v(9)
+HDL-1007 : elaborate module ram_blend_block in al_ip/ram_blend_block.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=24,DATA_WIDTH_B=24,ADDR_WIDTH_A=6,ADDR_WIDTH_B=6,DATA_DEPTH_A=64,DATA_DEPTH_B=64,MODE="SP",REGMODE_A="OUTREG",IMPLEMENT="9K(FAST)") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module slideshow_control in rtl/control/slideshow_control.v(6)
+HDL-1007 : elaborate module video_stream_640x480 in rtl/video/video_stream_640x480.v(7)
+HDL-1007 : elaborate module pcm_player in rtl/audio/pcm_player.v(5)
+HDL-1007 : elaborate module i2s_test_tone in rtl/audio/i2s_test_tone.v(8)
+HDL-1007 : elaborate module i2s_stereo_receiver in rtl/audio/i2s_stereo_receiver.v(6)
+HDL-1007 : elaborate module hdmi_acr_48k in rtl/audio/hdmi_acr_48k.v(7)
+HDL-1007 : elaborate module cdc_mailbox(WIDTH=24) in rtl/common/cdc_mailbox.v(6)
+HDL-1007 : elaborate module spectrum_dft in rtl/audio/spectrum_dft.v(6)
+HDL-1007 : elaborate module rom_dft_window in al_ip/rom_dft_window.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=16,DATA_WIDTH_B=16,ADDR_WIDTH_A=8,ADDR_WIDTH_B=8,DATA_DEPTH_A=256,DATA_DEPTH_B=256,MODE="SP",REGMODE_A="OUTREG",INIT_FILE="../assets/spectrum/td_init/hann_q15_16x256.mif",IMPLEMENT="9K(FAST)") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module rom_dft_twiddle in al_ip/rom_dft_twiddle.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=32,DATA_WIDTH_B=32,ADDR_WIDTH_A=8,ADDR_WIDTH_B=8,DATA_DEPTH_A=256,DATA_DEPTH_B=256,MODE="SP",REGMODE_A="OUTREG",INIT_FILE="../assets/spectrum/td_init/dft_twiddle_q15_32x256.mif",IMPLEMENT="9K(FAST)") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module ram_audio_window in al_ip/ram_audio_window.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=24,DATA_WIDTH_B=24,ADDR_WIDTH_A=8,ADDR_WIDTH_B=8,DATA_DEPTH_A=256,DATA_DEPTH_B=256,MODE="SP",REGMODE_A="OUTREG",IMPLEMENT="9K(FAST)") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module cdc_mailbox(WIDTH=256) in rtl/common/cdc_mailbox.v(6)
+HDL-1007 : elaborate module uptime_counter in rtl/control/uptime_counter.v(3)
+HDL-1007 : elaborate module switch_filter in rtl/control/switch_filter.v(3)
+HDL-1007 : elaborate module cdc_level(WIDTH=4) in rtl/common/cdc_level.v(5)
+HDL-1007 : elaborate module cdc_mailbox(WIDTH=66) in rtl/common/cdc_mailbox.v(6)
+HDL-1007 : elaborate module video_compositor in rtl/video/video_compositor.v(5)
+HDL-1007 : elaborate module rom_osd_font in al_ip/rom_osd_font.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=8,DATA_WIDTH_B=8,ADDR_WIDTH_A=13,ADDR_WIDTH_B=13,DATA_DEPTH_A=8192,DATA_DEPTH_B=8192,MODE="SP",REGMODE_A="OUTREG",INIT_FILE="../assets/osd/td_init/osd_font_8x8192.mif",IMPLEMENT="32K") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module rom_anlogic_logo in al_ip/rom_anlogic_logo.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=16,DATA_WIDTH_B=16,ADDR_WIDTH_A=13,ADDR_WIDTH_B=13,DATA_DEPTH_A=8192,DATA_DEPTH_B=8192,MODE="SP",REGMODE_A="OUTREG",INIT_FILE="../assets/osd/td_init/anlogic_logo_argb4444.mif",IMPLEMENT="32K") in D:\TD\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module hdmi_tx_640x480 in rtl/hdmi_transmitter/hdmi_tx_640x480.v(6)
+HDL-1007 : elaborate module hdmi_1_4b_transmitter_core_wrapper(HTOTAL=800,HSA=96,HFP=16,HBP=48,HACTIVE=640,VTOTAL=525,VSA=2,VFP=10,VBP=33,VACTIVE=480,VIDEO_TPG="Disable",VIDEO_VIC=1,IIC_SCL_DIV=126) in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(91)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(137)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(208)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(285)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(396)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(803)
+HDL-1007 : elaborate module EG_LOGIC_RAMFIFO(DATA_WIDTH=11,ADDR_WIDTH=10,IMPLEMENT="9K") in D:\TD\arch/eagle_macro.v(750)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(1338)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(1480)
+HDL-1007 : elaborate module EG_LOGIC_RAMFIFO(DATA_WIDTH=9,ADDR_WIDTH=10,IMPLEMENT="9K") in D:\TD\arch/eagle_macro.v(750)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2012)
+HDL-1007 : port '**' remains unconnected for this instance in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2733)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2403)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2842)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(2939)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3138)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3177)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3511)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3666)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3730)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3860)
+HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3307)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3949)
+HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(3318)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(4034)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(4127)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(4285)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(4586)
+HDL-1007 : elaborate module EG_LOGIC_RAMFIFO(DATA_WIDTH=96,ADDR_WIDTH=10,IMPLEMENT="9K") in D:\TD\arch/eagle_macro.v(750)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(5534)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(5657)
+HDL-1007 : elaborate module EG_LOGIC_RAMFIFO(DATA_WIDTH=24,ADDR_WIDTH=10,IMPLEMENT="9K") in D:\TD\arch/eagle_macro.v(750)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6273)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6501)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6575)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6924)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6994)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6994)
+HDL-1007 : elaborate module ** in rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(6994)
+HDL-1007 : elaborate module hdmi_phy_wrapper in rtl/hdmi_transmitter/hdmi_phy_warpper.v(3)
+HDL-1007 : elaborate module lane_lvds_10_1 in rtl/hdmi_transmitter/lane_lvds_10_1.v(4)
+HDL-1007 : elaborate module EG_LOGIC_ODDR in D:\TD\arch/eagle_macro.v(66)
+HDL-1007 : elaborate module cdc_level(WIDTH=3) in rtl/common/cdc_level.v(5)
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-1200 : Current top model is fpga_hdmi_top
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_Xf4KyfvX[0]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[10]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[9]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[8]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[7]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[6]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[5]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[4]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[3]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "al_soft_fifo_eospkg6_[2]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) 
+HDL-5106 Similar messages will be suppressed.
+HDL-1100 : Inferred 2 RAMs.
+RUN-1003 : finish command "elaborate -top fpga_hdmi_top" in  1.999111s wall, 1.609375s user + 0.218750s system = 1.828125s CPU (91.4%)
+
+RUN-1004 : used memory is 411 MB, reserved memory is 399 MB, peak memory is 411 MB
+RUN-1002 : start command "read_adc C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/constraints/hx4s20_hdmi_b.adc"
+RUN-1002 : start command "set_pin_assignment clk_50m LOCATION = R7; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment key_n[0] LOCATION = A2; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment key_n[1] LOCATION = B2; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment key_n[2] LOCATION = B1; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment key_n[3] LOCATION = C1; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment sw[0] LOCATION = C8; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment sw[1] LOCATION = C7; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment sw[2] LOCATION = C6; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment sw[3] LOCATION = C5; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment sd_cs_n LOCATION = A12; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment sd_sck LOCATION = A14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment sd_mosi LOCATION = A13; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment sd_miso LOCATION = B14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment tmds_ch0_p LOCATION = G5; IOSTANDARD = LVDS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment tmds_ch1_p LOCATION = F1; IOSTANDARD = LVDS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment tmds_ch2_p LOCATION = E1; IOSTANDARD = LVDS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment tmds_clk_p LOCATION = C3; IOSTANDARD = LVDS33; PULLTYPE = NONE;"
+RUN-1002 : start command "set_pin_assignment ddc_scl LOCATION = P2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; DRIVESTRENGTH = 4;"
+RUN-1002 : start command "set_pin_assignment ddc_sda LOCATION = R2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; DRIVESTRENGTH = 4;"
+RUN-1002 : start command "set_pin_assignment status_led[0] LOCATION = A4; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment status_led[1] LOCATION = A3; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment status_led[2] LOCATION = C10; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1002 : start command "set_pin_assignment status_led[3] LOCATION = B12; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; DRIVESTRENGTH = 8;"
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.019876s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 412, reserved = 399, peak = 412;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 50873, Total nets: 130531.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 2.299535s wall, 2.000000s user + 0.250000s system = 2.250000s CPU (97.8%); Memory(MB): used = 412, reserved = 399, peak = 412;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 21974, Total nets: 95459.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model fpga_hdmi_top
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.541041s wall, 0.500000s user + 0.031250s system = 0.531250s CPU (98.2%); Memory(MB): used = 412, reserved = 399, peak = 412;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 24936, Total nets: 91684.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/al_soft_fifo_Iackm5Am" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[31]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[30]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[29]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[28]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[27]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[26]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[25]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[24]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[23]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[22]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[21]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[20]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[19]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[18]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[17]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[16]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[15]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[14]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[13]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[12]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[11]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[10]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[9]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[8]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[7]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[6]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[5]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[4]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[3]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[2]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[1]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[0]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/al_soft_fifo_Iackm5Am" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[31]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[30]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[29]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[28]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[27]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[26]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[25]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[24]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[23]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[22]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[21]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[20]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[19]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[18]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[17]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[16]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[15]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[14]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[13]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[12]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[11]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[10]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[9]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[8]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[7]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[6]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[5]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[4]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[3]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[2]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[1]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[0]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/al_soft_fifo_Iackm5Am" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[31]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[30]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[29]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[28]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[27]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[26]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[25]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[24]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[23]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[22]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[21]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[20]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[19]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[18]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[17]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[16]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[15]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[14]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[13]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[12]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[11]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[10]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[9]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[8]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[7]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[6]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[5]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[4]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[3]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[2]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[1]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[0]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_sdram/u_controller/u2_wrrd/Sdr_init_ref_ba[1]" in rtl/sdram/sdr_wrrd.enc.v(0)
+		the net's pin: pin "i1[1]" in rtl/sdram/sdr_wrrd.enc.v(0)
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_sdram/u_controller/u2_wrrd/Sdr_init_ref_ba[0]" in rtl/sdram/sdr_wrrd.enc.v(0)
+		the net's pin: pin "i1[0]" in rtl/sdram/sdr_wrrd.enc.v(0)
+SYN-5013 WARNING: Undriven net: model "fpga_hdmi_top" / net "u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/al_soft_fifo_Iackm5Am" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[31]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[30]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[29]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[28]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[27]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[26]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[25]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[24]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[23]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[22]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[21]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[20]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[19]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[18]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[17]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[16]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[15]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[14]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[13]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[12]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[11]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[10]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[9]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[8]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[7]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[6]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[5]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[4]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[3]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[2]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[1]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+		the net's pin: pin "ar[0]" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0)
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.101598s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (92.3%); Memory(MB): used = 394, reserved = 391, peak = 412;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 23142, Total nets: 89879.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1066 : Inferred FSM for state register 'u_bmp/component_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_bmp/component_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_frame_store/state_reg' in module 'fpga_hdmi_top'
+-----------------------------------------------
+     Previous Encoding        New Encoding
+-----------------------------------------------
+                 00000     000000000000001
+                 00101     000000000000010
+                 00110     000000000000100
+                 00111     000000000001000
+                 00001     000000000010000
+                 00011     000000000100000
+                 01010     000000001000000
+                 01100     000000010000000
+                 01000     000000100000000
+                 00010     000001000000000
+                 00100     000010000000000
+                 01011     000100000000000
+                 01101     001000000000000
+                 01001     010000000000000
+                 01110     100000000000000
+-----------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_frame_store/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_player/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00               01
+                    01               10
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_player/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_sdram/u_controller/u2_wrrd/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                  0000              001
+                  0001              010
+                  0010              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_sdram/u_controller/u2_wrrd/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_slideshow/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                  0000         00000001
+                  0001         00000010
+                  0010         00000100
+                  0011         00001000
+                  0100         00010000
+                  0111         00100000
+                  0110         01000000
+                  0101         10000000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_slideshow/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_spectrum/capture_state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   001            00010
+                   010            00100
+                   011            01000
+                   100            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_spectrum/capture_state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_spectrum/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                  0000        000000001
+                  0001        000000010
+                  0010        000000100
+                  0011        000001000
+                  0100        000010000
+                  0101        000100000
+                  0110        001000000
+                  0111        010000000
+                  1000        100000000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_spectrum/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_storage/u_audio_sector_buffer/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00             0001
+                    01             0010
+                    10             0100
+                    11             1000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_storage/u_audio_sector_buffer/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_storage/u_sd_card/u_sd_cmd/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000          0000001
+                   001          0000010
+                   010          0000100
+                   011          0001000
+                   100          0010000
+                   101          0100000
+                   110          1000000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_storage/u_sd_card/u_sd_cmd/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_storage/u_sector_buffer/state_reg' in module 'fpga_hdmi_top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00             0001
+                    01             0010
+                    10             0100
+                    11             1000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_storage/u_sector_buffer/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1066 : Inferred FSM for state register 'u_wav/state_reg' in module 'fpga_hdmi_top'
+---------------------------------------------
+     Previous Encoding      New Encoding
+---------------------------------------------
+                  0000     0000000000001
+                  0001     0000000000010
+                  0010     0000000000100
+                  1101     0000000001000
+                  0011     0000000010000
+                  0100     0000000100000
+                  0111     0000001000000
+                  1000     0000010000000
+                  1001     0000100000000
+                  1100     0001000000000
+                  0110     0010000000000
+                  0101     0100000000000
+                  1110     1000000000000
+---------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_wav/state_reg' using encoding 'one_hot' in model 'fpga_hdmi_top'
+SYN-1057 : Inferred 11 FSM(s)
+SYN-1001 : Optimize 1 less-than instances
+SYN-1001 : Optimize 3 less-than instances
+SYN-1032 : 88128/705 useful/useless nets, 22613/70 useful/useless insts
+SYN-1001 : Bypass 1 mux instances
+SYN-1021 : Optimized 78 onehot mux instances.
+SYN-1068 : Optimized 21 binary mux instances.
+SYN-1019 : Optimized 13 mux instances.
+SYN-1021 : Optimized 43 onehot mux instances.
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1021 : Optimized 3 onehot mux instances.
+SYN-1001 : Optimize 563 less-than instances
+SYN-1016 : Merged 15099 instances.
+SYN-1025 : Merged 515 RAM ports.
+SYN-1026 : Infer Logic BRAM(u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 32	 write mode: NORMAL
+	 port b size: 1024 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 32	 write mode: NORMAL
+	 port b size: 1024 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 32	 write mode: NORMAL
+	 port b size: 1024 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_storage/u_audio_sector_buffer/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 8	 write mode: NORMAL
+	 port b size: 1024 x 8	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_storage/u_sector_buffer/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 8	 write mode: NORMAL
+	 port b size: 1024 x 8	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 32	 write mode: NORMAL
+	 port b size: 1024 x 32	 write mode: READBEFOREWRITE
+SYN-1023 : Infer 0 Logic DRAMs, 6 Logic BRAMs.
+SYN-1016 : Merged 3016 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 9.067660s wall, 8.468750s user + 0.468750s system = 8.937500s CPU (98.6%); Memory(MB): used = 448, reserved = 436, peak = 466;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 29095, Total nets: 35074.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1019 : Optimized 30 mux instances.
+SYN-1021 : Optimized 629 onehot mux instances.
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 353 inv instances.
+SYN-1017 : Remove 78 const input seq instances
+SYN-1018 : Transformed 2 mux instances.
+SYN-1019 : Optimized 143 mux instances.
+SYN-1020 : Optimized 1125 distributor mux.
+SYN-1001 : Optimize 120 less-than instances
+SYN-1019 : Optimized 110 mux instances.
+SYN-2595 : bram inst: u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_storage/u_audio_sector_buffer/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_storage/u_sector_buffer/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2593 : bram inst: u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 will be optimized to a new one with A-width 25 due to unused data out
+SYN-2593 : bram inst: u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 will be optimized to a new one with A-width 24 due to unused data out
+SYN-2541 : Reading BRAM "u_compositor/u_font/inst" init file "assets\osd\td_init\osd_font_8x8192.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2594 : bram inst: u_compositor/u_font/inst will be optimized to a new one with A-addr 12 due to const address
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1001 : Optimize constant input of 2 erams.
+SYN-1016 : Merged 8692 instances.
+SYN-1015 : Optimize round 1, 24393 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 50 inv instances.
+SYN-1017 : Remove 14 const input seq instances
+SYN-1019 : Optimized 34 mux instances.
+SYN-1020 : Optimized 40 distributor mux.
+SYN-1019 : Optimized 189 mux instances.
+SYN-2593 : bram inst: u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 will be optimized to a new one with A-width 25 due to unused data out
+SYN-2593 : bram inst: u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4 will be optimized to a new one with A-width 24 due to unused data out
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1016 : Merged 61 instances.
+SYN-1015 : Optimize round 2, 822 better
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_compositor/u_font/inst" in al_ip/rom_osd_font.v(38) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_compositor/u_font/inst" in al_ip/rom_osd_font.v(38) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4" in al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0) / pin "beb[0]"
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-3010 : Optimized 327 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1019 : Optimized 10 mux instances.
+SYN-1020 : Optimized 163 distributor mux.
+SYN-1019 : Optimized 2 mux instances.
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1016 : Merged 829 instances.
+SYN-1015 : Optimize round 1, 1248 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 1 inv instances.
+SYN-1019 : Optimized 4 mux instances.
+SYN-1020 : Optimized 2 distributor mux.
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1016 : Merged 8 instances.
+SYN-1015 : Optimize round 2, 16 better
+SYN-1014 : Optimize round 3
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1015 : Optimize round 3, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 19.250183s wall, 17.625000s user + 0.921875s system = 18.546875s CPU (96.3%); Memory(MB): used = 629, reserved = 624, peak = 666;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 33216, Total nets: 38870.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.013173s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (118.6%); Memory(MB): used = 629, reserved = 624, peak = 666;
+
+SYN-1079 : finish stage Check Design. Total instances: 33216, Total nets: 38870.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 31.297005s wall, 28.703125s user + 1.671875s system = 30.375000s CPU (97.1%); Memory(MB): used = 629, reserved = 624, peak = 666;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 33216, Total nets: 38870.
+
+RUN-1003 : finish command "optimize_rtl" in  31.318506s wall, 28.718750s user + 1.671875s system = 30.390625s CPU (97.0%)
+
+RUN-1004 : used memory is 629 MB, reserved memory is 624 MB, peak memory is 666 MB
+RUN-1002 : start command "export_db C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/tmp/td_registration/project1_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "read_sdc C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/constraints/fpga_hdmi_top.sdc"
+RUN-1002 : start command "read_sdc -ip fifo_pixel_async C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.tcl"
+RUN-1002 : start command "optimize_gate"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.843675s wall, 0.765625s user + 0.062500s system = 0.828125s CPU (98.2%); Memory(MB): used = 636, reserved = 740, peak = 668;
+
+SYN-1079 : finish stage Map Reg. Total instances: 33216, Total nets: 38870.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2002 : EG_PHY_SDRAM_2M_32 instance u_sdram/u_sdram.
+SYN-2001 : Map 78 IOs to PADs of model 'fpga_hdmi_top'
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.334928s wall, 0.312500s user + 0.015625s system = 0.328125s CPU (98.0%); Memory(MB): used = 637, reserved = 741, peak = 668;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module fpga_hdmi_top"
+SYN-6577 WARNING: The clock signal "u_sdram/u_controller/SDRAM_CLK" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 2 BUFG to GCLK
+SYN-2541 : Logic Ram FIFO "u_hdmi/u_hdmi_core/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo"
+SYN-2541 : Logic Ram FIFO "u_hdmi/u_hdmi_core/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo"
+SYN-6562 WARNING: The init value of "u_audio_load/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4(al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4(al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_bmp/u_scale/u_even/inst(al_ip/ram_scale_line1.v(53))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_bmp/u_scale/u_odd/inst(al_ip/ram_scale_line1.v(53))" will be ignored since gate eram_init is set to off
+SYN-2541 : Reading BRAM "u_compositor/u_logo/inst" init file "assets\osd\td_init\anlogic_logo_argb4444.mif"
+SYN-2542 : Parsing MIF init file
+SYN-6562 WARNING: The init value of "u_frame_store/u_new/inst(al_ip/ram_blend_block.v(53))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_frame_store/u_old/inst(al_ip/ram_blend_block.v(53))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_hdmi/u_hdmi_core/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_497(rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_hdmi/u_hdmi_core/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_353(rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_load_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4(al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_spectrum/u_a/inst(al_ip/ram_audio_window.v(53))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_spectrum/u_b/inst(al_ip/ram_audio_window.v(53))" will be ignored since gate eram_init is set to off
+SYN-2541 : Reading BRAM "u_spectrum/u_twiddle/inst" init file "assets\spectrum\td_init\dft_twiddle_q15_32x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_spectrum/u_window/inst" init file "assets\spectrum\td_init\hann_q15_16x256.mif"
+SYN-2542 : Parsing MIF init file
+SYN-6562 WARNING: The init value of "u_storage/u_audio_sector_buffer/ramread0_syn_4(rtl/storage/sd_sector_buffer.v(54))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_storage/u_sector_buffer/ramread0_syn_4(rtl/storage/sd_sector_buffer.v(54))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_video_fifo/soft_fifo_832789485777_Inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_BpJUKxcz/ramread0_syn_4(al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v(0))" will be ignored since gate eram_init is set to off
+SYN-2571 : Map 28 macro multiplier
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1016 : Merged 19 instances.
+SYN-2571 : Optimize after map_dsp, round 1, 19 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-2561 : Map multiplier u_compositor/mult3 into carry-chain logic
+SYN-2561 : Map multiplier u_compositor/mult4 into carry-chain logic
+SYN-2561 : Map multiplier u_compositor/mult5 into carry-chain logic
+SYN-2561 : Map multiplier u_spectrum/mult4 into carry-chain logic
+SYN-1001 : Throwback 577 control mux instances
+SYN-1001 : Generate 409 bigger adders
+SYN-1001 : Convert 4 adder
+SYN-1001 : Optimize 514 adders
+SYN-1001 : Convert 15 adder
+SYN-1001 : Optimize 6 less-than instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 1422 instances.
+SYN-2501 : Optimize round 1, 5051 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 3 instances.
+SYN-2501 : Optimize round 1, 18 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+20.000000
+6.666000
+6.666000
+40.000000
+20.000000
+6.666000
+6.666000
+40.000000
+SYN-2501 : Map 1133 macro adder(s)
+SYN-1019 : Optimized 525 mux instances.
+SYN-1016 : Merged 1621 instances.
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_key1/key_meta_reg" in rtl/control/key_debounce.v(16) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_key2/key_meta_reg" in rtl/control/key_debounce.v(16) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_key3/key_meta_reg" in rtl/control/key_debounce.v(16) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[0]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[1]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[2]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[3]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[4]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[5]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "fpga_hdmi_top" / inst "u_sdram/u_controller/u2_wrrd/Sdr_rd_dout_reg[6]" in rtl/sdram/sdr_wrrd.enc.v(0) / pin "clk"
+SYN-5011 Similar messages will be suppressed.
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 11.806813s wall, 10.390625s user + 1.125000s system = 11.515625s CPU (97.5%); Memory(MB): used = 681, reserved = 773, peak = 681;
+
+SYN-1079 : finish stage Map Macro. Total instances: 48688, Total nets: 54416.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Collect 9998 PI 6378 PO (9 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 10840 (3.34), #lev = 24 (3.12), #crit_level = 24
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 10938 (3.25), #lev = 21 (3.21), #crit_level = 0
+SYN-3001 : Logic optimization opt = 4.55 sec, map = 1.03 sec, post map opt = 4.24 sec.
+SYN-3001 : Mapper removed 2 lut buffers
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 18.509879s wall, 16.859375s user + 0.953125s system = 17.812500s CPU (96.2%); Memory(MB): used = 712, reserved = 774, peak = 712;
+
+SYN-1001 : Packing model "fpga_hdmi_top" ...
+SYN-4010 : Pack lib has 58 rtl pack models with 26 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 10099 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 280 carry chain into lslice
+SYN-4007 : Packing 4664 adder to BLE ...
+SYN-4008 : Packed 4664 adder and 23 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "start_timer" in  1.194090s wall, 1.093750s user + 0.062500s system = 1.156250s CPU (96.8%)
+
+RUN-1004 : used memory is 702 MB, reserved memory is 764 MB, peak memory is 712 MB
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |       -53555                |
+|     Setup TNS             |    -11127616                |
+|     Num of violated S-EP  |          547                |
+|     Hold WNS              |          371                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |        10076                |
+|     #luts                 |        10939                |
+|     #lut1                 |          133                |
+|     #lut1(~A)             |          132                |
+|     #slices               |         3729                |
+|     slices percentage     |       38.05%                |
+|     #RAMs                 |           56                |
+|     #DSPs                 |           29                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |          650                |
+|     #insts in MACRO       |         3729                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          266                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |          106                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        37.52                |
+| dff(single fanout)->dff   |         1584                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     clk_50m               |          253                |
+|     Total                 |          253                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   Clock   |  Index  |  Budget(Period)  |  Level(Quota)  |                                                                                                                                                                            Cell Type List                                                                                                                                                                             |  Reason  |  Slack   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clk_50m  |    1    |   19854(20000)   |     62(25)     |  SEQ,ADDER,ADDER,LUT3,ADDER,ADDER,MULT18,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,LUT2,LUT5,LUT4,LUT4,LUT3,LUT3,LUT4,LUT4,LUT5,LUT2,LUT4,LUT2,LUT5,LUT4,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,SEQ  |  normal  |  -50267  
+           |    2    |   19854(20000)   |     62(25)     |  SEQ,ADDER,ADDER,LUT3,ADDER,ADDER,MULT18,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,LUT2,LUT5,LUT4,LUT4,LUT3,LUT3,LUT4,LUT4,LUT5,LUT2,LUT4,LUT2,LUT5,LUT4,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,SEQ  |  normal  |  -50267  
+           |    3    |   19854(20000)   |     62(25)     |  SEQ,ADDER,ADDER,LUT3,ADDER,ADDER,MULT18,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,LUT2,LUT5,LUT4,LUT4,LUT3,LUT3,LUT4,LUT4,LUT5,LUT2,LUT4,LUT2,LUT5,LUT4,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,SEQ  |  normal  |  -50267  
+           |    4    |   19854(20000)   |     62(25)     |  SEQ,ADDER,ADDER,LUT3,ADDER,ADDER,MULT18,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,LUT2,LUT5,LUT4,LUT4,LUT3,LUT3,LUT4,LUT4,LUT5,LUT2,LUT4,LUT2,LUT5,LUT4,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,SEQ  |  normal  |  -50078  
+           |    5    |   19854(20000)   |     62(25)     |  SEQ,ADDER,ADDER,LUT3,ADDER,ADDER,MULT18,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,LUT2,LUT5,LUT4,LUT4,LUT3,LUT3,LUT4,LUT4,LUT5,LUT2,LUT4,LUT2,LUT5,LUT4,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,SEQ  |  normal  |  -50078  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock            |  Period            |  0      |  1     |  2     |  3     |  4     |  5     |  6    |  7    |  8    |  9    |  10   |  11   |  12  |  13  |  14  |  15  |  16  |  17  |  18   |  28  |  29  |  >=30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clk_50m          |  20.000ns (50MHz)  |  7143   |  1730  |  993   |  974   |  1074  |  1036  |  687  |  522  |  496  |  584  |  522  |  840  |  14  |  6   |  14  |  34  |  1   |  15  |  217  |  0   |  0   |  8755
+  clk_hdmi_serial  |  8.000ns (125MHz)  |  54     |  33    |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0   |  0   |  0   |  0    |  0   |  0   |  8755
+  clk_pixel        |  40.000ns (25MHz)  |  4419   |  1517  |  303   |  626   |  256   |  132   |  51   |  61   |  12   |  5    |  2    |  0    |  1   |  0   |  0   |  0   |  0   |  0   |  0    |  5   |  15  |  8755
+  clk_sdram        |  6.666ns (150MHz)  |  1219   |  187   |  242   |  170   |  167   |  154   |  6    |  6    |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0   |  0   |  0   |  0    |  0   |  0   |  8755
+  clk_sdram_180    |  6.666ns (150MHz)  |  16     |  32    |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0   |  0   |  0   |  0    |  0   |  0   |  8755
+  Total            |  NA                |  12851  |  3499  |  1538  |  1770  |  1497  |  1322  |  744  |  589  |  508  |  589  |  524  |  840  |  15  |  6   |  14  |  34  |  1   |  15  |  217  |  5   |  15  |  8755
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(35348 paths analyzed)
+
+Hierarchical Rent Exponent Report
++--------------------------------------------------------------------------+
+|Inst           |Model              |Rent     |Cell     |Pin     |Term     |
++--------------------------------------------------------------------------+
+|top            |fpga_hdmi_top      |0.12     |25656    |110482  |14       |
+|  u_spectrum   |spectrum_dft_37    |0.55     |1714     |7433    |268      |
+|  u_hdmi       |hdmi_tx_640x480_13 |0.55     |2562     |8940    |262      |
+|  u_wav        |wav_pcm_reader_51  |0.54     |1089     |4771    |191      |
+|  u_compositor |video_compositor_9 |0.52     |4506     |20609   |350      |
+|  u_storage    |fat32_media_top_39 |0.45     |7879     |35145   |246      |
+|  u_bmp        |bmp24_decoder_8    |0.37     |2357     |12503   |95       |
++--------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+SYN-1001 : The design has 7 dangling syn_keep insts.
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  4.762138s wall, 4.546875s user + 0.125000s system = 4.671875s CPU (98.1%)
+
+RUN-1004 : used memory is 733 MB, reserved memory is 774 MB, peak memory is 733 MB
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 36.905787s wall, 33.468750s user + 2.328125s system = 35.796875s CPU (97.0%); Memory(MB): used = 733, reserved = 774, peak = 733;
+
+RUN-1003 : finish command "optimize_gate" in  36.916590s wall, 33.484375s user + 2.328125s system = 35.812500s CPU (97.0%)
+
+RUN-1004 : used memory is 733 MB, reserved memory is 774 MB, peak memory is 733 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model fpga_hdmi_top
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.111668s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (97.9%); Memory(MB): used = 733, reserved = 774, peak = 733;
+
+RUN-1002 : start command "read_sdc C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/constraints/fpga_hdmi_top.sdc"
+RUN-1002 : start command "read_sdc -ip fifo_pixel_async C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.tcl"
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "start_timer" in  1.184417s wall, 1.125000s user + 0.031250s system = 1.156250s CPU (97.6%)
+
+RUN-1004 : used memory is 733 MB, reserved memory is 774 MB, peak memory is 733 MB
+RUN-1003 : finish command "update_timing" in  2.518632s wall, 2.281250s user + 0.156250s system = 2.437500s CPU (96.8%)
+
+RUN-1004 : used memory is 733 MB, reserved memory is 774 MB, peak memory is 733 MB
+RUN-1002 : start command "get_ports *"
+CONSTRAINT_PORTS clk_50m {key_n[3]} {key_n[2]} {key_n[1]} {key_n[0]} sd_miso {sw[3]} {sw[2]} {sw[1]} {sw[0]} ddc_scl sd_cs_n sd_mosi sd_sck {status_led[3]} {status_led[2]} {status_led[1]} {status_led[0]} tmds_ch0_p tmds_ch1_p tmds_ch2_p tmds_clk_p ddc_sda
+RUN-1002 : start command "get_clocks *"
+CONSTRAINT_CLOCKS clk_50m clk_hdmi_serial clk_pixel clk_sdram clk_sdram_180
+RUN-1002 : start command "report_clock_summary -file C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/tmp/td_registration/clocks.rpt"
+RUN-1002 : start command "report_area -file C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/tmp/td_registration/area.rpt"
+RUN-1001 : standard
+***Report Model: fpga_hdmi_top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        23   out of    188   12.23%
+  #input                   10
+  #output                  12
+  #inout                    1
+
+LUT Statistics
+#Total_luts             10939
+  #lut4                  9762
+  #lut5                  1177
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                    18397   out of  19600   93.86%
+#reg                    10060   out of  19600   51.33%
+#bram                      51   out of     64   79.69%
+  #bram9k                  51
+  #fifo9k                   0
+#bram32k                    5   out of     16   31.25%
+#dsp                       29   out of     29  100.00%
+#pad                       27   out of    188   14.36%
+  #ireg                     7
+  #oreg                     8
+  #treg                     0
+#pll                        2   out of      4   50.00%
+#gclk                       2   out of     16   12.50%
+
+RUN-1002 : start command "report_timing_summary -file C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/tmp/td_registration/timing.rpt"
+RUN-1002 : start command "export_db C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/tmp/td_registration/project1_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+TD_REGISTRATION_GATE_DONE
+RUN-1002 : start command "close_project"

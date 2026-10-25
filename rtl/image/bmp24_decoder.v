@@ -1,9 +1,8 @@
 `timescale 1ns/1ps
 `default_nettype none
 
-// Fixed contest format: 640x480, BI_RGB, 24-bit BGR file bytes -> RGB888.
-// Both bottom-up (+480) and top-down (-480) files are supported. A 640-pixel
-// row is 1920 bytes, already aligned to the BMP four-byte row boundary.
+// BI_RGB BGR24, 1..2048 in each dimension, padded rows, either orientation.
+// Endpoint-aligned bilinear resampling produces exactly 640x480 pixels.
 module bmp24_decoder (
     input wire clk,
     input wire rst,
@@ -17,8 +16,8 @@ module bmp24_decoder (
     output wire begin_valid,
     input wire begin_ready,
     output wire bottom_up,
-    output reg [31:0] pixel_data,
-    output reg pixel_valid,
+    output wire [31:0] pixel_data,
+    output wire pixel_valid,
     input wire pixel_ready,
     output reg done,
     output reg image_complete,
@@ -35,24 +34,35 @@ module bmp24_decoder (
     reg [31:0] compression, bitmap_size;
     reg [1:0] component;
     reg [7:0] blue, green;
-    reg [18:0] assembled_pixels, sent_pixels;
+    reg [22:0] assembled_pixels;
+    reg [18:0] sent_pixels;
+    reg [12:0] row_byte;
+    reg [23:0] raw_data;
+    reg raw_valid;
+    wire raw_ready, scale_complete;
+    wire [23:0] scaled_data;
+    wire [31:0] abs_height = height[31] ? (~height+32'd1) : height;
+    wire [31:0] source_pixels=width*abs_height;
+    wire [31:0] row_stride=(width*32'd3+32'd3)&32'hFFFFFFFC;
+    wire [63:0] source_bytes={32'd0,row_stride}*abs_height;
+    bilinear_scaler u_scale (.clk(clk),.rst(rst || cancel || start || error),
+      .start(begin_valid && begin_ready),.width(width[11:0]),.height(abs_height[11:0]),
+      .in_data(raw_data),.in_valid(raw_valid),.in_ready(raw_ready),
+      .out_data(scaled_data),.out_valid(pixel_valid),.out_ready(pixel_ready),.complete(scale_complete));
+    assign pixel_data={8'd0,scaled_data};
     reg saw_last;
     wire accept_byte = file_valid && file_ready;
-    wire [32:0] required_size = {1'b0, pixel_offset} + 33'd921600;
-    wire geometry_ok = (dib_size >= 40) && (width == 640)
-                       && ((height == 480) || (height == 32'hFFFFFE20))
-                       && (planes == 1) && (bit_count == 24)
-                       && (compression == 0)
-                       && ((bitmap_size == 0) || (bitmap_size >= 921600));
-    wire size_ok = ({1'b0,pixel_offset} >= (33'd14 + {1'b0,dib_size}))
-                   && (required_size <= {1'b0,file_size})
-                   && (required_size <= {1'b0,declared_size})
-                   && (declared_size <= file_size);
-    assign bottom_up = (height == 32'd480);
+    wire [63:0] required_size = {32'd0,pixel_offset}+source_bytes;
+    wire geometry_ok = dib_size>=40 && width>=1 && width<=2048
+        && abs_height>=1 && abs_height<=2048 && planes==1 && bit_count==24
+        && compression==0 && (bitmap_size==0 || bitmap_size>=source_bytes);
+    wire size_ok = {32'd0,pixel_offset} >= 64'd14+dib_size
+        && required_size<=file_size && required_size<=declared_size && declared_size<=file_size;
+    assign bottom_up = !height[31];
     assign begin_valid = (state == BEGIN_IMAGE) && !error;
     assign file_ready = !rst && ((state == HEADER) || (state == SKIP)
                          || (state == TRAILER) || (state == DROP)
-                         || ((state == PIXELS) && !pixel_valid));
+                         || ((state == PIXELS) && !raw_valid));
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -63,7 +73,7 @@ module bmp24_decoder (
             width <= 0; height <= 0; compression <= 0; bitmap_size <= 0;
             component <= 0; blue <= 0; green <= 0;
             assembled_pixels <= 0; sent_pixels <= 0;
-            pixel_data <= 0; pixel_valid <= 0;
+            raw_data <= 0; raw_valid <= 0; row_byte<=0;
             done <= 0; image_complete <= 0; error <= 0; error_code <= 0;
             saw_last <= 0;
         end else if (start) begin
@@ -74,21 +84,21 @@ module bmp24_decoder (
             width <= 0; height <= 0; compression <= 0; bitmap_size <= 0;
             component <= 0;
             assembled_pixels <= 0; sent_pixels <= 0;
-            pixel_valid <= 0; pixel_data <= 0;
+            raw_valid <= 0; raw_data <= 0; row_byte<=0;
             done <= 0; image_complete <= 0; error <= 0; error_code <= 0;
             saw_last <= 0;
         end else if (cancel) begin
             state <= IDLE;
-            pixel_valid <= 0;
+            raw_valid <= 0;
             done <= 1;
             error <= 1;
             error_code <= 8'h05;
         end else begin
             if (pixel_valid && pixel_ready) begin
-                pixel_valid <= 1'b0;
                 sent_pixels <= sent_pixels + 1'b1;
                 if (sent_pixels == PIXEL_COUNT - 1'b1) image_complete <= 1'b1;
             end
+            if(raw_valid && raw_ready) raw_valid<=0;
             if (accept_byte) begin
                 position <= position + 1'b1;
                 if (file_last) saw_last <= 1'b1;
@@ -160,24 +170,25 @@ module bmp24_decoder (
                     end
                 end
                 PIXELS: if (accept_byte) begin
-                    if (component == 0) begin blue <= file_data; component <= 1; end
-                    else if (component == 1) begin green <= file_data; component <= 2; end
-                    else begin
-                        pixel_data <= {8'h00, file_data, green, blue};
-                        pixel_valid <= 1;
-                        component <= 0;
-                        assembled_pixels <= assembled_pixels + 1'b1;
-                        if (assembled_pixels == PIXEL_COUNT - 1'b1) state <= TRAILER;
-                    end
-                    if (file_last) begin
-                        if (!((component == 2) && (assembled_pixels == PIXEL_COUNT - 1'b1))) begin
-                            error <= 1; error_code <= 8'h04;
+                    if(row_byte < width*3) begin
+                        if(component==0) begin blue<=file_data;component<=1;end
+                        else if(component==1) begin green<=file_data;component<=2;end
+                        else begin
+                            raw_data<={file_data,green,blue};raw_valid<=1;component<=0;
+                            assembled_pixels<=assembled_pixels+1'b1;
                         end
-                        state <= FINISH;
+                    end
+                    if(row_byte==row_stride-1'b1) begin
+                        row_byte<=0;
+                        if(position+1'b1==required_size) state<=TRAILER;
+                    end else row_byte<=row_byte+1'b1;
+                    if(file_last) begin
+                        if(position+1'b1!=required_size) begin error<=1;error_code<=8'h04;end
+                        state<=FINISH;
                     end
                 end
                 TRAILER, DROP: if (accept_byte && file_last) state <= FINISH;
-                FINISH: if (!pixel_valid) begin
+                FINISH: if (error || scale_complete) begin
                     done <= 1;
                     if (!image_complete && !error) begin error <= 1; error_code <= 8'h04; end
                     state <= IDLE;

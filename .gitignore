@@ -5,3 +5,24 @@
 # TD session state and lock files.
 /.recent_user_depot.ini
 .lock.f
+
+# ModelSim generated libraries and scratch databases.
+/sim/modelsim/build/
+/sim/modelsim/results/*.wlf
+/sim/modelsim/results/*.console.log
+/sim/modelsim/results/osd_observed.hex
+/sim/modelsim/results/e2e_hdmi_*.hex
+/al_ip/transcript
+/al_ip/vsim.wlf
+
+# TD generated runs and scratch reports. Curated evidence stays in docs/.
+/project1_Runs/
+/td_*.log
+/td_*.logw
+/gate.qor
+/clk_50m
+/u_pll_hdmi_pll_inst_clkc_1_
+/u_pll_hdmi_pll_inst_refclk
+/u_pll_sdram_bufg_feedback_clko
+/u_pll_sdram_pll_inst_refclk
+/u_sdram_u_sdram_clk

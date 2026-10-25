@@ -1,0 +1,14 @@
+{
+  "simulator": "ModelSim Intel FPGA Starter Edition 2020.1",
+  "passed": true,
+  "result": "PASS: tb_end_to_end TF SPI->FAT32->BMP/WAV->physical SDRAM->real HDMI serial; commits=3 PCM=12506 HDMI_PCM=12506 image_pixels=880000 fade_pixels=160000 refreshes=10470 sectors=178 WAV_loops=7",
+  "audio_pairs": 12506,
+  "audio_seconds": 0.26054166666666667,
+  "images": [
+    "e2e_hdmi_a.png",
+    "e2e_hdmi_half.png",
+    "e2e_hdmi_b.png"
+  ],
+  "scope": "SPI SDHC + FAT32 + real BRAM/FIFOs + encrypted SDRAM controller and HDMI + physical DQ/TMDS",
+  "qualification": "Ideal PLL output clocks; 2-frame crossfade; 512/1024-word audio watermarks. Production defaults unchanged."
+}

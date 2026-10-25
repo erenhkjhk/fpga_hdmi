@@ -1,0 +1,185 @@
+# vsim -c -onfinish exit -lib C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work tb_top_smoke glbl -l C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\results/tb_top_smoke.log -do "C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_top_smoke.do" 
+# Start time: 14:54:14 on Oct 25,2026
+# Loading sv_std.std
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.tb_top_smoke
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fpga_hdmi_top
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.pll_sdram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_LOGIC_BUFG
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_PHY_PLL
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_dphase_sel
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.prediv_mux
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_pll_div2
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_clko_premux
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_pll_div128
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.eg_clko_ctrl
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.pll_hdmi
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.reset_sync
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.key_debounce
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.cdc_level
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fat32_media_top
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fat32_reader
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sd_sector_buffer
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sd_spi_card
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.spi_byte_master
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sd_spi_cmd
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.bmp24_decoder
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.bilinear_scaler
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_scale_line1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.fifo_pixel_async
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.cdc_mailbox
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_ram_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_as_ram
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdr_init_ref
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_PHY_SDRAM_2M_32
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.wav_pcm_reader
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.media_async_fifo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.sdram_frame_store
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_blend_block
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.slideshow_control
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.video_stream_640x480
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.pcm_player
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.i2s_test_tone
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.i2s_stereo_receiver
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.hdmi_acr_48k
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.spectrum_dft
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_dft_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_dft_twiddle
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.ram_audio_window
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.uptime_counter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.switch_filter
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.video_compositor
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_osd_font
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.rom_anlogic_logo
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.hdmi_tx_640x480
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.hdmi_1_4b_transmitter_core_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.hdmi_phy_wrapper
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.lane_lvds_10_1
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.glbl
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_LOGIC_RAMFIFO
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.gray_count
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.showahead_buffer
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.gray2bin
+# Loading C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\work.EG_LOGIC_ODDR
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'load_reg'. The port definition is at: D:/TD/sim_release/eg4/eg_phy_pll.v(25).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_pll_sdram/pll_inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/pll_sdram.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'load_reg'. The port definition is at: D:/TD/sim_release/eg4/eg_phy_pll.v(25).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_pll_hdmi/pll_inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/pll_hdmi.v Line: 68
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_load_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_load_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_load_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_video_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_video_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_video_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_audio_load/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'soft_fifo_832789485777_Inst'.  Expected 23, found 20.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v Line: 52
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/fifo_pixel_async.v(52): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_audio_playback/u_fifo/soft_fifo_832789485777_Inst/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/al_ip/fifo_pixel_async/RTL/soft_fifo_832789485777.v Line: 56
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'bea'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (24) does not match connection size (32) for port 'dib'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'beb'. The port definition is at: nofile(59).
+#    Time: 0 fs  Iteration: 0  Instance: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected>/<protected>/<protected>/<protected>/u5 File: D:/TD/sim_release/eg4/eg_logic_ramfifo.v Line: 159
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '<protected>'.  Expected <protected>, found <protected>.
+#    Time: 0 fs  Iteration: 0  Protected: /tb_top_smoke/dut/u_hdmi/u_hdmi_core/<protected>/<protected> File: C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/rtl/hdmi_transmitter/hdmi_1_4b_transmitter_core_wrapper.enc.v Line: 125
+# ** Warning: (vsim-3722) <protected>(<protected>): [TFMPC] - Missing connection for port '<protected>'.
+# do {C:\Users\30909\.codex\worktrees\main-work\fpga_hdmi_project\sim\modelsim\build\tb_top_smoke.do}
+# ******************** : The Attribute            REFCLK_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             FBCLK_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           3.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC0_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           7.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC1_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           7.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC2_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC3_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC4_DIV on pll instance tb_top_smoke.dut.u_pll_sdram.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute            REFCLK_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           2.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             FBCLK_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           5.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC0_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           8.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC1_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to          40.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC2_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC3_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# ******************** : The Attribute             CLKC4_DIV on pll instance tb_top_smoke.dut.u_pll_hdmi.pll_inst.para_int_range_chk is set to           1.  Legal values for this attribute are           1 to         128.
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# TOP_PROGRESS t=         10000000000 reset=1 lock=0/0 sdram_init=x video_lock=0 audio=0
+# TOP_PROGRESS t=         20000000000 reset=0 lock=1/1 sdram_init=0 video_lock=0 audio=0
+# TOP_PROGRESS t=         30000000000 reset=0 lock=1/1 sdram_init=1 video_lock=1 audio=12
+# TOP_PROGRESS t=         40000000000 reset=0 lock=1/1 sdram_init=1 video_lock=1 audio=60
+# PASS: tb_top_smoke actual PLL + SDRAM + HDMI encrypted cores, OSD black background, fallback audio=100
+# ** Note: $finish    : C:/Users/30909/.codex/worktrees/main-work/fpga_hdmi_project/sim/modelsim/tests/tb_top_smoke.sv(27)
+#    Time: 4830291200 ps  Iteration: 0  Instance: /tb_top_smoke
+# End time: 14:59:38 on Oct 25,2026, Elapsed time: 0:05:24
+# Errors: 0, Warnings: 62

@@ -1,0 +1,180 @@
+standard
+***Report Model: fpga_hdmi_top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        23   out of    188   12.23%
+  #input                   10
+  #output                  12
+  #inout                    1
+
+LUT Statistics
+#Total_luts             10939
+  #lut4                  9762
+  #lut5                  1177
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                    18397   out of  19600   93.86%
+#reg                    10099   out of  19600   51.53%
+#bram                      51   out of     64   79.69%
+  #bram9k                  51
+  #fifo9k                   0
+#bram32k                    5   out of     16   31.25%
+#dsp                       29   out of     29  100.00%
+#pad                       27   out of    188   14.36%
+  #ireg                     7
+  #oreg                     8
+  #treg                     0
+#pll                        2   out of      4   50.00%
+#gclk                       2   out of     16   12.50%
+
+Report Hierarchy Area:
++-----------------------------------------------------------------------------------------------------------------------------+
+|Instance                                    |Module                             |lut     |ripple  |seq     |bram    |dsp     |
++-----------------------------------------------------------------------------------------------------------------------------+
+|top                                         |fpga_hdmi_top                      |14668   |3729    |10114   |56      |29      |
+|  u_acr                                     |hdmi_acr_48k                       |12      |4       |7       |0       |0       |
+|  u_audio_fault                             |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_audio_high                              |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_audio_load                              |media_async_fifo                   |119     |12      |155     |3       |0       |
+|    u_fifo                                  |fifo_pixel_async                   |118     |12      |151     |3       |0       |
+|      soft_fifo_832789485777_Inst           |soft_fifo_832789485777             |94      |12      |151     |3       |0       |
+|        al_soft_fifo_ELyPIOfr               |al_soft_fifo_J5Dq79mN_832789485777 |23      |6       |26      |0       |0       |
+|          al_soft_fifo_xs3EoyQB             |al_soft_fifo_HSBzlVQP_832789485777 |0       |0       |1       |0       |0       |
+|        al_soft_fifo_ktZv2ExW               |al_soft_fifo_CMEB9ZlH_832789485777 |1       |0       |0       |3       |0       |
+|          al_soft_fifo_BpJUKxcz             |al_soft_fifo_EoCVCOi5_832789485777 |1       |0       |0       |3       |0       |
+|        al_soft_fifo_pXuL5aOr               |al_soft_fifo_nzFbx5iw_832789485777 |33      |6       |45      |0       |0       |
+|          al_soft_fifo_asSgfuf5             |al_soft_fifo_ZBIjHksb_832789485777 |4       |3       |40      |0       |0       |
+|          al_soft_fifo_skRjTPEo             |al_soft_fifo_qzvcIcE1_832789485777 |14      |3       |4       |0       |0       |
+|        cdc$cross_inst                      |al_soft_fifo_zlzAoo5o_832789485777 |37      |0       |80      |0       |0       |
+|    u_rd_done                               |cdc_level                          |0       |0       |2       |0       |0       |
+|    u_wr_done                               |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_audio_playback                          |media_async_fifo                   |95      |12      |161     |3       |0       |
+|    u_fifo                                  |fifo_pixel_async                   |94      |12      |157     |3       |0       |
+|      soft_fifo_832789485777_Inst           |soft_fifo_832789485777             |94      |12      |157     |3       |0       |
+|        al_soft_fifo_ELyPIOfr               |al_soft_fifo_J5Dq79mN_832789485777 |19      |3       |22      |0       |0       |
+|          al_soft_fifo_xs3EoyQB             |al_soft_fifo_HSBzlVQP_832789485777 |0       |0       |1       |0       |0       |
+|        al_soft_fifo_ktZv2ExW               |al_soft_fifo_CMEB9ZlH_832789485777 |1       |0       |0       |3       |0       |
+|          al_soft_fifo_BpJUKxcz             |al_soft_fifo_EoCVCOi5_832789485777 |1       |0       |0       |3       |0       |
+|        al_soft_fifo_pXuL5aOr               |al_soft_fifo_nzFbx5iw_832789485777 |37      |9       |55      |0       |0       |
+|          al_soft_fifo_asSgfuf5             |al_soft_fifo_ZBIjHksb_832789485777 |4       |3       |40      |0       |0       |
+|          al_soft_fifo_skRjTPEo             |al_soft_fifo_qzvcIcE1_832789485777 |14      |3       |4       |0       |0       |
+|        cdc$cross_inst                      |al_soft_fifo_zlzAoo5o_832789485777 |37      |0       |80      |0       |0       |
+|    u_rd_done                               |cdc_level                          |0       |0       |2       |0       |0       |
+|    u_wr_done                               |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_audio_priority                          |cdc_level                          |1       |1       |2       |0       |0       |
+|  u_audio_receiver                          |i2s_stereo_receiver                |44      |4       |105     |0       |0       |
+|  u_bmp                                     |bmp24_decoder                      |1637    |672     |688     |12      |20      |
+|    u_scale                                 |bilinear_scaler                    |878     |317     |301     |12      |14      |
+|      u_even                                |ram_scale_line1                    |1       |0       |0       |6       |0       |
+|      u_odd                                 |ram_scale_line1                    |1       |0       |0       |6       |0       |
+|  u_compositor                              |video_compositor                   |3572    |1222    |929     |5       |0       |
+|    u_font                                  |rom_osd_font                       |263     |0       |0       |1       |0       |
+|    u_logo                                  |rom_anlogic_logo                   |14      |0       |2       |4       |0       |
+|  u_frame_info                              |cdc_mailbox                        |6       |0       |10      |0       |0       |
+|  u_frame_request                           |cdc_mailbox                        |3       |0       |7       |0       |0       |
+|  u_frame_store                             |sdram_frame_store                  |617     |171     |231     |4       |3       |
+|    u_new                                   |ram_blend_block                    |1       |0       |0       |2       |0       |
+|    u_old                                   |ram_blend_block                    |1       |0       |0       |2       |0       |
+|  u_hdmi                                    |hdmi_tx_640x480                    |1168    |204     |1394    |14      |0       |
+|    u_hdmi_core                             |hdmi_1_4b_transmitter_core_wrapper |1134    |204     |1347    |14      |0       |
+|      u0_reset_sync                         |hdmi_1_4b_tx_reset_sync            |0       |0       |2       |0       |0       |
+|      u_hdmi_edid_wrapper                   |hdmi_edid_wrapper                  |4       |4       |0       |0       |0       |
+|        u_iic_master_wrapper                |iic_master_wrapper                 |4       |4       |0       |0       |0       |
+|          u_iic_transmitter_controller      |iic_transmitter_controller         |4       |4       |0       |0       |0       |
+|      u_hdmi_tx_controller_wrapper          |hdmi_tx_controller_wrapper         |1130    |200     |1345    |14      |0       |
+|        u0_hdmi_tmds_encode                 |hdmi_tmds_encode                   |132     |30      |160     |0       |0       |
+|        u1_hdmi_tmds_encode                 |hdmi_tmds_encode                   |129     |30      |108     |0       |0       |
+|        u2_hdmi_tmds_encode                 |hdmi_tmds_encode                   |127     |30      |108     |0       |0       |
+|        u_hdmi_data_distribution            |hdmi_data_distribution             |2       |0       |43      |0       |0       |
+|        u_hdmi_island_data_assemble         |hdmi_island_data_assemble          |276     |0       |417     |0       |0       |
+|        u_hdmi_island_data_gen              |hdmi_island_data_gen               |279     |5       |352     |11      |0       |
+|          U_audio_sample_packet_2_channel   |audio_sample_packet_2_channel      |149     |5       |235     |11      |0       |
+|            u_w96_d1024_fifo                |w96_d1024_fifo                     |24      |0       |55      |11      |0       |
+|            u_BCH_32_24_encode              |BCH_32_24_encode                   |0       |0       |1       |0       |0       |
+|            u_BCH_64_56_encode              |BCH_64_56_encode                   |0       |0       |8       |0       |0       |
+|          u_audio_clock_regeneration_packet |audio_clock_regeneration_packet    |7       |0       |9       |0       |0       |
+|            u_BCH_64_56_encode              |BCH_64_56_encode                   |0       |0       |1       |0       |0       |
+|        u_hdmi_video_data_assemble          |hdmi_video_data_assemble           |0       |0       |40      |0       |0       |
+|        u_hdmi_video_source                 |hdmi_video_source                  |128     |95      |38      |0       |0       |
+|        u_video_axi_stream_receiver         |video_axi_stream_receiver          |57      |10      |79      |3       |0       |
+|          u_w24_d1024_fifo                  |w24_d1024_fifo                     |47      |3       |76      |3       |0       |
+|    u_hdmi_phy                              |hdmi_phy_wrapper                   |34      |0       |47      |0       |0       |
+|      u0_lane_lvds_8_1                      |lane_lvds_10_1                     |12      |0       |18      |0       |0       |
+|      u1_lane_lvds_8_1                      |lane_lvds_10_1                     |10      |0       |12      |0       |0       |
+|      u2_lane_lvds_8_1                      |lane_lvds_10_1                     |10      |0       |12      |0       |0       |
+|      u3_lane_lvds_8_1                      |lane_lvds_10_1                     |2       |0       |5       |0       |0       |
+|  u_image_begin                             |cdc_mailbox                        |6       |0       |10      |0       |0       |
+|  u_image_finish                            |cdc_mailbox                        |6       |0       |10      |0       |0       |
+|  u_image_result                            |cdc_mailbox                        |6       |0       |10      |0       |0       |
+|  u_key1                                    |key_debounce                       |30      |5       |20      |0       |0       |
+|  u_key2                                    |key_debounce                       |30      |5       |20      |0       |0       |
+|  u_key3                                    |key_debounce                       |30      |5       |20      |0       |0       |
+|  u_load_fifo                               |fifo_pixel_async                   |92      |12      |157     |3       |0       |
+|    soft_fifo_832789485777_Inst             |soft_fifo_832789485777             |92      |12      |157     |3       |0       |
+|      al_soft_fifo_ELyPIOfr                 |al_soft_fifo_J5Dq79mN_832789485777 |23      |6       |32      |0       |0       |
+|        al_soft_fifo_xs3EoyQB               |al_soft_fifo_HSBzlVQP_832789485777 |0       |0       |1       |0       |0       |
+|      al_soft_fifo_ktZv2ExW                 |al_soft_fifo_CMEB9ZlH_832789485777 |1       |0       |0       |3       |0       |
+|        al_soft_fifo_BpJUKxcz               |al_soft_fifo_EoCVCOi5_832789485777 |1       |0       |0       |3       |0       |
+|      al_soft_fifo_pXuL5aOr                 |al_soft_fifo_nzFbx5iw_832789485777 |32      |6       |45      |0       |0       |
+|        al_soft_fifo_asSgfuf5               |al_soft_fifo_ZBIjHksb_832789485777 |4       |3       |40      |0       |0       |
+|        al_soft_fifo_skRjTPEo               |al_soft_fifo_qzvcIcE1_832789485777 |14      |3       |4       |0       |0       |
+|      cdc$cross_inst                        |al_soft_fifo_zlzAoo5o_832789485777 |36      |0       |80      |0       |0       |
+|  u_load_rd_done_sys                        |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_load_wr_done_mem                        |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_memory_fault_sys                        |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_memory_ready_sys                        |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_osd_status                              |cdc_mailbox                        |20      |0       |140     |0       |0       |
+|  u_played_sample                           |cdc_mailbox                        |5       |0       |56      |0       |0       |
+|  u_player                                  |pcm_player                         |59      |0       |102     |0       |0       |
+|  u_playing                                 |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_pll_hdmi                                |pll_hdmi                           |0       |0       |0       |0       |0       |
+|  u_pll_sdram                               |pll_sdram                          |0       |0       |0       |0       |0       |
+|  u_preroll                                 |cdc_level                          |1       |1       |2       |0       |0       |
+|  u_reset_mem                               |reset_sync                         |7       |0       |4       |0       |0       |
+|  u_reset_pixel                             |reset_sync                         |0       |0       |4       |0       |0       |
+|  u_reset_sys                               |reset_sync                         |0       |0       |4       |0       |0       |
+|  u_sdram                                   |sdram_ram_wrapper                  |147     |5       |424     |0       |0       |
+|    u_controller                            |sdr_as_ram                         |147     |5       |424     |0       |0       |
+|      u1_init_ref                           |sdr_init_ref                       |22      |5       |81      |0       |0       |
+|      u2_wrrd                               |sdr_wrrd                           |69      |0       |343     |0       |0       |
+|  u_slideshow                               |slideshow_control                  |269     |69      |97      |0       |0       |
+|  u_spectrum                                |spectrum_dft                       |992     |96      |716     |7       |6       |
+|    u_a                                     |ram_audio_window                   |9       |0       |0       |2       |0       |
+|    u_b                                     |ram_audio_window                   |9       |0       |0       |2       |0       |
+|    u_twiddle                               |rom_dft_twiddle                    |0       |0       |0       |2       |0       |
+|    u_window                                |rom_dft_window                     |0       |0       |0       |1       |0       |
+|  u_spectrum_cdc                            |cdc_mailbox                        |3       |0       |456     |0       |0       |
+|  u_storage                                 |fat32_media_top                    |4654    |1010    |3223    |2       |0       |
+|    u_audio_reader                          |fat32_reader                       |1879    |476     |1381    |0       |0       |
+|    u_audio_sector_buffer                   |sd_sector_buffer                   |178     |3       |117     |1       |0       |
+|    u_fat32_reader                          |fat32_reader                       |1827    |482     |1270    |0       |0       |
+|    u_sd_card                               |sd_spi_card                        |588     |46      |336     |0       |0       |
+|      u_sd_cmd                              |sd_spi_cmd                         |163     |9       |127     |0       |0       |
+|      u_spi_byte                            |spi_byte_master                    |71      |5       |48      |0       |0       |
+|    u_sector_buffer                         |sd_sector_buffer                   |179     |3       |117     |1       |0       |
+|  u_switches                                |switch_filter                      |15      |0       |21      |0       |0       |
+|    u_sync                                  |cdc_level                          |0       |0       |8       |0       |0       |
+|  u_tone                                    |i2s_test_tone                      |60      |33      |61      |0       |0       |
+|  u_transition                              |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_uptime                                  |uptime_counter                     |47      |3       |34      |0       |0       |
+|  u_video_fifo                              |fifo_pixel_async                   |112     |12      |156     |3       |0       |
+|    soft_fifo_832789485777_Inst             |soft_fifo_832789485777             |88      |12      |156     |3       |0       |
+|      al_soft_fifo_ELyPIOfr                 |al_soft_fifo_J5Dq79mN_832789485777 |26      |6       |25      |0       |0       |
+|        al_soft_fifo_xs3EoyQB               |al_soft_fifo_HSBzlVQP_832789485777 |0       |0       |1       |0       |0       |
+|      al_soft_fifo_ktZv2ExW                 |al_soft_fifo_CMEB9ZlH_832789485777 |1       |0       |0       |3       |0       |
+|        al_soft_fifo_BpJUKxcz               |al_soft_fifo_EoCVCOi5_832789485777 |1       |0       |0       |3       |0       |
+|      al_soft_fifo_pXuL5aOr                 |al_soft_fifo_nzFbx5iw_832789485777 |25      |6       |51      |0       |0       |
+|        al_soft_fifo_asSgfuf5               |al_soft_fifo_ZBIjHksb_832789485777 |4       |3       |40      |0       |0       |
+|      cdc$cross_inst                        |al_soft_fifo_zlzAoo5o_832789485777 |36      |0       |80      |0       |0       |
+|  u_video_rd_done_mem                       |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_video_rd_reset                          |reset_sync                         |1       |0       |4       |0       |0       |
+|  u_video_status_sys                        |cdc_level                          |0       |0       |6       |0       |0       |
+|  u_video_stream                            |video_stream_640x480               |60      |6       |55      |0       |0       |
+|  u_video_wr_done_pixel                     |cdc_level                          |0       |0       |2       |0       |0       |
+|  u_video_wr_reset                          |reset_sync                         |1       |0       |4       |0       |0       |
+|  u_wav                                     |wav_pcm_reader                     |601     |150     |488     |0       |0       |
+|  u_wav_mode                                |cdc_level                          |0       |0       |2       |0       |0       |
++-----------------------------------------------------------------------------------------------------------------------------+
