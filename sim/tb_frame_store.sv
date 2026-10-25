@@ -95,6 +95,28 @@ module tb_frame_store;
             checked_pixels=checked_pixels+1;total_checked=total_checked+1;
         end
     end
+    // End-to-end accounting of every eligible SDRAM return and FIFO write,
+    // including outputs beyond the display checker and partial-frame flushes.
+    integer pending_blends=0,blend_inputs=0,blend_outputs=0;
+    always @(posedge clk) begin
+        if(rst) pending_blends=0;
+        else begin
+            if(dut.read_return && !dut.old_pass && !fault) begin
+                pending_blends=pending_blends+1;blend_inputs=blend_inputs+1;
+            end
+            if(video_fifo_we) begin
+                pending_blends=pending_blends-1;blend_outputs=blend_outputs+1;
+            end
+            if(!fault && (pending_blends<0 || pending_blends>4))
+                $fatal(1,"blend pipeline lost/duplicated data: pending=%0d",pending_blends);
+            if(video_fifo_reset && pending_blends!=0)
+                $fatal(1,"frame flush before blend pipeline drained");
+            if(frame_req_valid && frame_req_ready && pending_blends!=0)
+                $fatal(1,"new frame accepted with old blend data pending");
+            if(dut.state==dut.IDLE && !fault && pending_blends!=0)
+                $fatal(1,"block released before final blend FIFO write");
+        end
+    end
     task load_image(input integer id,input bit bottom,input integer words,input bit abort_job);
         begin
             wait(sdr_init_done && load_fifo_ready);
@@ -141,6 +163,9 @@ module tb_frame_store;
         @(negedge clk);frame_req_valid=0;
         wait(dut.state==3);force sdr_rd_valid=0;
         wait(fault);release sdr_rd_valid;
+        if(pending_blends!=0 || blend_inputs!=blend_outputs)
+            $fatal(1,"blend return/write mismatch: %0d/%0d",blend_inputs,blend_outputs);
+        $display("blend pipeline returns/writes checked: %0d/%0d",blend_inputs,blend_outputs);
         $display("PASS tb_frame_store: %0d pixels, 65 alpha levels, two full loads, bottom-up, abort, 25 MHz sink, max refresh gap %0d, timeout detection",total_checked,max_refresh_gap);
         $finish;
     end

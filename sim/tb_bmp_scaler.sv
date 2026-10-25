@@ -55,8 +55,34 @@ module tb_bmp_scaler;
             $display("case %s OK pixels=%0d code=%h",name,pixels,error_code);
         end
     endtask
+    // Cancel/reset while the new registered arithmetic has work in flight.
+    // Restart through the public file interface; no DUT state is forced.
+    task interrupt_pipeline(input integer phase,input bit reset_job);
+        integer fd;
+        begin
+            @(negedge clk);active=0;ptr=0;pixels=0;held=0;success_case=0;
+            fd=$fopen("../sim/out/vectors/tiny.bmp","rb");
+            if(fd==0) $fatal(1,"cannot open cancellation fixture");
+            byte_count=$fread(bytes,fd);$fclose(fd);file_size=byte_count;
+            start=1;@(negedge clk);start=0;active=1;
+            wait(dut.u_scaler.state==phase);
+            @(negedge clk);active=0;
+            if(reset_job) rst=1;else cancel=1;
+            @(negedge clk);rst=0;cancel=0;held=0;
+            if(!reset_job && (!done || !error || error_code!=5))
+                $fatal(1,"pipeline cancel phase %0d not acknowledged",phase);
+            repeat(12) begin
+                @(negedge clk);
+                if(pixel_valid) $fatal(1,"stale pipeline output after interruption phase %0d",phase);
+            end
+        end
+    endtask
     initial begin
         repeat(5) @(negedge clk);rst=0;
+        interrupt_pipeline(dut.u_scaler.WEIGHT_STEP,0);
+        interrupt_pipeline(dut.u_scaler.MULTIPLY,0);
+        interrupt_pipeline(dut.u_scaler.ACCUMULATE,0);
+        interrupt_pipeline(dut.u_scaler.MULTIPLY,1);
         `include "vectors/bmp_cases.vh"
         // Abort a valid long job, then reuse the same decoder without resetting it.
         @(negedge clk);file_size=66;byte_count=66;ptr=0;pixels=0;success_case=0;
@@ -70,8 +96,8 @@ module tb_bmp_scaler;
         @(negedge clk);cancel=0;active=0;
         if(!done || !error || error_code!=5 || pixel_valid) $fatal(1,"cancel did not stop job");
         run_case("one",58,0,1);
-        $display("PASS tb_bmp_scaler: %0d BMP cases, all full-frame pixels, cancellation/restart",tests);
+        $display("PASS tb_bmp_scaler: %0d BMP cases, all full-frame pixels, weight/multiply/accumulate cancellation and reset/restart",tests);
         $finish;
     end
-    initial begin #2000000000; $fatal(1,"tb_bmp_scaler timeout"); end
+    initial begin #(64'd6000000000); $fatal(1,"tb_bmp_scaler timeout"); end
 endmodule

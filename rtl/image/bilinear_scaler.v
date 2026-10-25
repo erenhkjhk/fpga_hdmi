@@ -19,7 +19,8 @@ module bilinear_scaler (
 );
     localparam [3:0] IDLE=0, LOAD=1, ROW_CHECK=2, LEFT=3, RIGHT=4,
                      CAPTURE=5, H_TOP=6, H_BOTTOM=7, V_BLEND=8,
-                     SEND=9, X_STEP=10, Y_STEP=11;
+                     SEND=9, X_STEP=10, Y_STEP=11, WEIGHT_INIT=12,
+                     WEIGHT_STEP=13, MULTIPLY=14, ACCUMULATE=15;
     reg [3:0] state;
     reg [12:0] w, h, input_x, input_y, loaded_rows, sx, sy;
     reg [12:0] x_rem, y_rem;
@@ -43,9 +44,16 @@ module bilinear_scaler (
         .dia(source_data), .addra(input_x[11:0]), .clka(clk),
         .wea(source_take && input_y[0]), .addrb(read_addr), .clkb(clk), .dob(line1)
     );
-    // Constant divisors, no divider IP. The remainders are normalized before use.
-    wire [20:0] fx_full = {x_rem, 8'b0} / 21'd639;
-    wire [20:0] fy_full = {y_rem, 8'b0} / 21'd479;
+    // Eight registered binary-fraction steps compute floor(rem*256/divisor).
+    // X_STEP/Y_STEP normalize the remainders first, so each step needs only
+    // one 11-bit compare/subtract. No combinational divider or new IP.
+    reg [9:0] fx_rem, fy_rem;
+    reg [7:0] fx, fy;
+    reg [2:0] weight_bit;
+    wire [10:0] fx_double = {fx_rem, 1'b0};
+    wire [10:0] fy_double = {fy_rem, 1'b0};
+    wire [10:0] fx_sub = fx_double - 11'd639;
+    wire [10:0] fy_sub = fy_double - 11'd479;
     function [7:0] component;
         input [23:0] rgb;
         input [1:0] c;
@@ -59,29 +67,31 @@ module bilinear_scaler (
     endfunction
     // One signed multiplier is shared by both horizontal blends, the vertical
     // blend, and all three components. Horizontal values keep all Q8 bits.
-    reg signed [17:0] mul_delta;
-    reg signed [17:0] mul_weight;
+    reg signed [17:0] mul_delta, mul_weight;
     reg signed [26:0] blend_base;
-    wire signed [35:0] product = mul_delta * mul_weight;
+    reg signed [17:0] delta_next, weight_next;
+    reg signed [26:0] base_next;
+    reg signed [35:0] product;
+    reg [1:0] blend_kind; // 0: top, 1: bottom, 2: vertical
     wire signed [26:0] blend = blend_base + $signed(product[26:0]);
     always @* begin
-        mul_delta = 0; mul_weight = $signed({10'b0, fx_full[7:0]});
-        blend_base = 0;
+        delta_next = 0; weight_next = $signed({10'b0, fx});
+        base_next = 0;
         case (state)
             H_TOP: begin
-                mul_delta = $signed({10'b0, component(p01, channel)})
+                delta_next = $signed({10'b0, component(p01, channel)})
                           - $signed({10'b0, component(p00, channel)});
-                blend_base = $signed({11'b0, component(p00, channel), 8'b0});
+                base_next = $signed({11'b0, component(p00, channel), 8'b0});
             end
             H_BOTTOM: begin
-                mul_delta = $signed({10'b0, component(p11, channel)})
+                delta_next = $signed({10'b0, component(p11, channel)})
                           - $signed({10'b0, component(p10, channel)});
-                blend_base = $signed({11'b0, component(p10, channel), 8'b0});
+                base_next = $signed({11'b0, component(p10, channel), 8'b0});
             end
             V_BLEND: begin
-                mul_delta = $signed({2'b0, h1}) - $signed({2'b0, h0});
-                mul_weight = $signed({10'b0, fy_full[7:0]});
-                blend_base = $signed({3'b0, h0, 8'b0}) + 27'sd32768;
+                delta_next = $signed({2'b0, h1}) - $signed({2'b0, h0});
+                weight_next = $signed({10'b0, fy});
+                base_next = $signed({3'b0, h0, 8'b0}) + 27'sd32768;
             end
             default: begin end
         endcase
@@ -94,6 +104,9 @@ module bilinear_scaler (
             out_x <= 0; out_y <= 0; channel <= 0;
             p00 <= 0; p01 <= 0; p10 <= 0; p11 <= 0; h0 <= 0; h1 <= 0;
             pixel_data <= 0; done <= 0;
+            fx_rem <= 0; fy_rem <= 0; fx <= 0; fy <= 0; weight_bit <= 0;
+            mul_delta <= 0; mul_weight <= 0; blend_base <= 0;
+            product <= 0; blend_kind <= 0;
         end else if (cancel) begin
             state <= IDLE; done <= 0;
         end else if (start) begin
@@ -110,8 +123,21 @@ module bilinear_scaler (
                 end else input_x <= input_x + 1'b1;
             end
             ROW_CHECK: begin
-                if (loaded_rows > sy_next) state <= LEFT;
+                if (loaded_rows > sy_next) state <= WEIGHT_INIT;
                 else state <= LOAD;
+            end
+            WEIGHT_INIT: begin
+                fx_rem <= x_rem[9:0]; fy_rem <= y_rem[9:0];
+                fx <= 0; fy <= 0; weight_bit <= 0;
+                state <= WEIGHT_STEP;
+            end
+            WEIGHT_STEP: begin
+                fx_rem <= (fx_double >= 11'd639) ? fx_sub[9:0] : fx_double[9:0];
+                fy_rem <= (fy_double >= 11'd479) ? fy_sub[9:0] : fy_double[9:0];
+                fx <= {fx[6:0], (fx_double >= 11'd639)};
+                fy <= {fy[6:0], (fy_double >= 11'd479)};
+                if (weight_bit == 7) state <= LEFT;
+                else weight_bit <= weight_bit + 1'b1;
             end
             LEFT: state <= RIGHT; // RAM samples x0 on this edge.
             RIGHT: begin          // Capture x0; RAM samples x1 on this edge.
@@ -124,16 +150,31 @@ module bilinear_scaler (
                 p11 <= sy_next[0] ? line1 : line0;
                 channel <= 0; state <= H_TOP;
             end
-            H_TOP: begin h0 <= blend[15:0]; state <= H_BOTTOM; end
-            H_BOTTOM: begin h1 <= blend[15:0]; state <= V_BLEND; end
-            V_BLEND: begin
-                case (channel)
-                    0: pixel_data[7:0] <= blend[23:16];
-                    1: pixel_data[15:8] <= blend[23:16];
-                    default: pixel_data[23:16] <= blend[23:16];
+            H_TOP, H_BOTTOM, V_BLEND: begin
+                mul_delta <= delta_next; mul_weight <= weight_next;
+                blend_base <= base_next;
+                blend_kind <= (state == H_TOP) ? 2'd0
+                            : (state == H_BOTTOM) ? 2'd1 : 2'd2;
+                state <= MULTIPLY;
+            end
+            MULTIPLY: begin
+                product <= mul_delta * mul_weight;
+                state <= ACCUMULATE;
+            end
+            ACCUMULATE: begin
+                case (blend_kind)
+                    0: begin h0 <= blend[15:0]; state <= H_BOTTOM; end
+                    1: begin h1 <= blend[15:0]; state <= V_BLEND; end
+                    default: begin
+                        case (channel)
+                            0: pixel_data[7:0] <= blend[23:16];
+                            1: pixel_data[15:8] <= blend[23:16];
+                            default: pixel_data[23:16] <= blend[23:16];
+                        endcase
+                        if (channel == 2) state <= SEND;
+                        else begin channel <= channel + 1'b1; state <= H_TOP; end
+                    end
                 endcase
-                if (channel == 2) state <= SEND;
-                else begin channel <= channel + 1'b1; state <= H_TOP; end
             end
             SEND: if (pixel_ready) begin
                 if (out_x == 639) begin
@@ -150,7 +191,7 @@ module bilinear_scaler (
             end
             X_STEP: begin
                 if (x_rem >= 639) begin x_rem <= x_rem - 13'd639; sx <= sx + 1'b1; end
-                else state <= LEFT;
+                else state <= WEIGHT_INIT;
             end
             Y_STEP: begin
                 if (y_rem >= 479) begin y_rem <= y_rem - 13'd479; sy <= sy + 1'b1; end

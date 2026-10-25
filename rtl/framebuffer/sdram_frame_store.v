@@ -74,7 +74,14 @@ module sdram_frame_store (
     reg selected_fade, selected_new_region, read_new, pair_pending, block_half;
     wire [31:0] old_pixel;
     reg [31:0] new_pixel_d, mixed_pixel;
-    reg return_valid_d, mixed_valid;
+    reg return_valid_d, delta_valid, product_valid, mixed_valid;
+    reg return_fade_d, delta_fade, product_fade;
+    reg [8:0] return_alpha_d, delta_alpha;
+    reg signed [9:0] delta_r, delta_g, delta_b;
+    reg signed [19:0] product_r, product_g, product_b;
+    reg [23:0] delta_base, product_base;
+    reg [31:0] delta_bypass, product_bypass;
+    wire blend_busy = return_valid_d || delta_valid || product_valid || mixed_valid;
     wire reading = (state == R_SEND) || (state == R_DRAIN);
     wire old_pass = selected_fade && !read_new;
     wire read_return = reading && sdr_rd_valid && (transferred < 64);
@@ -83,16 +90,15 @@ module sdram_frame_store (
         .wea(!rst && !fault && read_return && old_pass),
         .addrb({block_half, transferred[5:0]}), .clkb(clk), .dob(old_pixel)
     );
-    function [7:0] fade_channel;
-        input [7:0] old_c, new_c;
-        input [8:0] alpha;
-        reg signed [9:0] delta;
-        reg signed [19:0] scaled, product;
+    // Product and base are registered before this final addition. Packing
+    // +128 into the base preserves round-to-nearest without a second adder.
+    function [7:0] fade_sum;
+        input signed [19:0] product_c;
+        input [7:0] old_c;
+        reg signed [19:0] scaled;
         begin
-            delta = $signed({2'b0,new_c}) - $signed({2'b0,old_c});
-            product = delta * $signed({1'b0,alpha});
-            scaled = product + $signed({4'b0,old_c,8'b0}) + 20'sd128;
-            fade_channel = scaled[15:8];
+            scaled = product_c + $signed({4'b0, old_c, 8'h80});
+            fade_sum = scaled[15:8];
         end
     endfunction
     wire refresh_due = (refresh_timer >= REFRESH_INTERVAL);
@@ -144,18 +150,43 @@ module sdram_frame_store (
             fault <= 0; transition_active <= 0; fade_alpha <= 0;
             selected_fade <= 0; selected_alpha <= 0; selected_new_region <= 0;
             read_new <= 0; pair_pending <= 0; block_half <= 0;
-            new_pixel_d <= 0; mixed_pixel <= 0; return_valid_d <= 0; mixed_valid <= 0;
+            new_pixel_d <= 0; mixed_pixel <= 0;
+            return_valid_d <= 0; delta_valid <= 0; product_valid <= 0; mixed_valid <= 0;
+            return_fade_d <= 0; delta_fade <= 0; product_fade <= 0;
+            return_alpha_d <= 0; delta_alpha <= 0;
+            delta_r <= 0; delta_g <= 0; delta_b <= 0;
+            product_r <= 0; product_g <= 0; product_b <= 0;
+            delta_base <= 0; product_base <= 0;
+            delta_bypass <= 0; product_bypass <= 0;
         end else begin
-            // One clock for synchronous block RAM, then one registered RGB blend.
-            // R_DRAIN's quiet interval includes both stages and the FIFO write.
+            // S0: synchronous old-block RAM read, with matching new pixel and
+            // frame parameters. Old-image reads fill RAM but do not emit pixels.
             return_valid_d <= !fault && read_return && !old_pass;
             new_pixel_d <= sdr_rd_data;
-            mixed_valid <= return_valid_d && !fault;
-            if (selected_fade) mixed_pixel <= {8'b0,
-                fade_channel(old_pixel[23:16], new_pixel_d[23:16], selected_alpha),
-                fade_channel(old_pixel[15:8], new_pixel_d[15:8], selected_alpha),
-                fade_channel(old_pixel[7:0], new_pixel_d[7:0], selected_alpha)};
-            else mixed_pixel <= new_pixel_d;
+            return_fade_d <= selected_fade;
+            return_alpha_d <= selected_alpha;
+            // S1: signed RGB differences. Carry base/bypass and mode with data.
+            delta_valid <= return_valid_d && !fault;
+            delta_r <= $signed({2'b0,new_pixel_d[23:16]}) - $signed({2'b0,old_pixel[23:16]});
+            delta_g <= $signed({2'b0,new_pixel_d[15:8]}) - $signed({2'b0,old_pixel[15:8]});
+            delta_b <= $signed({2'b0,new_pixel_d[7:0]}) - $signed({2'b0,old_pixel[7:0]});
+            delta_alpha <= return_alpha_d;
+            delta_base <= old_pixel[23:0]; delta_bypass <= new_pixel_d;
+            delta_fade <= return_fade_d;
+            // S2: independent registered signed products; alpha includes 256.
+            product_valid <= delta_valid && !fault;
+            product_r <= delta_r * $signed({1'b0,delta_alpha});
+            product_g <= delta_g * $signed({1'b0,delta_alpha});
+            product_b <= delta_b * $signed({1'b0,delta_alpha});
+            product_base <= delta_base; product_bypass <= delta_bypass;
+            product_fade <= delta_fade;
+            // S3: add old*256+128, then take the same eight result bits as before.
+            mixed_valid <= product_valid && !fault;
+            if (product_fade) mixed_pixel <= {8'b0,
+                fade_sum(product_r, product_base[23:16]),
+                fade_sum(product_g, product_base[15:8]),
+                fade_sum(product_b, product_base[7:0])};
+            else mixed_pixel <= product_bypass;
             if (mixed_valid && (!video_fifo_wr_ready || video_fifo_full || video_fifo_reset)) fault <= 1;
             if (!sdr_init_done) refresh_timer <= 0;
             else if (refresh_timer != 13'h1FFF) refresh_timer <= refresh_timer + 1'b1;
@@ -298,7 +329,9 @@ module sdram_frame_store (
                     wait_count <= wait_count + 1'b1;
                     if (sdr_rd_valid) quiet_count <= 0;
                     else if (quiet_count != 255) quiet_count <= quiet_count + 1'b1;
-                    if ((transferred == 64) && (quiet_count >= 20)) begin
+                    // Keep the controller's 20-cycle quiet guard and explicitly
+                    // drain every blend stage before changing frame/block state.
+                    if ((transferred == 64) && (quiet_count >= 20) && !blend_busy) begin
                         if (old_pass) begin
                             pair_pending <= 1; // Preserve old block across refresh/idle.
                         end else begin
